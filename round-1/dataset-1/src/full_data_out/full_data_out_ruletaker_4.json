@@ -1,0 +1,617 @@
+{
+  "datasets": [
+    {
+      "dataset": "ruletaker",
+      "examples": [
+        {
+          "input": "Anne is cold. Anne is nice. Anne is quiet. Erin is cold. Erin is green. Erin is not kind. Erin is smart. If Erin is quiet then Erin is cold. All big things are green. If Erin is smart then Erin is cold. If something is smart and nice then it is cold. If Anne is green then Anne is not big. If something is nice and not green then it is cold. Erin is not smart.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is nice. Anne is quiet. Erin is cold. Erin is green. Erin is not kind. Erin is smart. If Erin is quiet then Erin is cold. All big things are green. If Erin is smart then Erin is cold. If something is smart and nice then it is cold. If Anne is green then Anne is not big. If something is nice and not green then it is cold. Anne is not green.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is nice. Anne is quiet. Erin is cold. Erin is green. Erin is not kind. Erin is smart. If Erin is quiet then Erin is cold. All big things are green. If Erin is smart then Erin is cold. If something is smart and nice then it is cold. If Anne is green then Anne is not big. If something is nice and not green then it is cold. Erin is big.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The cow is not young. The rabbit eats the tiger. The rabbit is big. The rabbit sees the cow. The rabbit visits the cow. The tiger eats the rabbit. The tiger is not rough. The tiger sees the cow. The tiger visits the cow. The tiger visits the rabbit. If someone is rough and not green then they eat the tiger. If the cow eats the rabbit then the cow does not visit the tiger. If the cow is kind then the cow does not see the tiger. If the rabbit visits the tiger and the tiger does not eat the cow then the tiger does not visit the rabbit. If someone eats the rabbit and they are young then the rabbit sees the cow. If the tiger sees the cow and someone does not eat the tiger then they are kind. If someone does not see the rabbit and the rabbit does not eat the tiger then the tiger visits the rabbit. If someone is green and they do not visit the rabbit then the rabbit sees the tiger. The rabbit visits the cow.",
+          "output": "entailment"
+        },
+        {
+          "input": "The cow is not young. The rabbit eats the tiger. The rabbit is big. The rabbit sees the cow. The rabbit visits the cow. The tiger eats the rabbit. The tiger is not rough. The tiger sees the cow. The tiger visits the cow. The tiger visits the rabbit. If someone is rough and not green then they eat the tiger. If the cow eats the rabbit then the cow does not visit the tiger. If the cow is kind then the cow does not see the tiger. If the rabbit visits the tiger and the tiger does not eat the cow then the tiger does not visit the rabbit. If someone eats the rabbit and they are young then the rabbit sees the cow. If the tiger sees the cow and someone does not eat the tiger then they are kind. If someone does not see the rabbit and the rabbit does not eat the tiger then the tiger visits the rabbit. If someone is green and they do not visit the rabbit then the rabbit sees the tiger. The tiger does not eat the rabbit.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The cow is not young. The rabbit eats the tiger. The rabbit is big. The rabbit sees the cow. The rabbit visits the cow. The tiger eats the rabbit. The tiger is not rough. The tiger sees the cow. The tiger visits the cow. The tiger visits the rabbit. If someone is rough and not green then they eat the tiger. If the cow eats the rabbit then the cow does not visit the tiger. If the cow is kind then the cow does not see the tiger. If the rabbit visits the tiger and the tiger does not eat the cow then the tiger does not visit the rabbit. If someone eats the rabbit and they are young then the rabbit sees the cow. If the tiger sees the cow and someone does not eat the tiger then they are kind. If someone does not see the rabbit and the rabbit does not eat the tiger then the tiger visits the rabbit. If someone is green and they do not visit the rabbit then the rabbit sees the tiger. The rabbit does not see the tiger.",
+          "output": "entailment"
+        },
+        {
+          "input": "The cow is not young. The rabbit eats the tiger. The rabbit is big. The rabbit sees the cow. The rabbit visits the cow. The tiger eats the rabbit. The tiger is not rough. The tiger sees the cow. The tiger visits the cow. The tiger visits the rabbit. If someone is rough and not green then they eat the tiger. If the cow eats the rabbit then the cow does not visit the tiger. If the cow is kind then the cow does not see the tiger. If the rabbit visits the tiger and the tiger does not eat the cow then the tiger does not visit the rabbit. If someone eats the rabbit and they are young then the rabbit sees the cow. If the tiger sees the cow and someone does not eat the tiger then they are kind. If someone does not see the rabbit and the rabbit does not eat the tiger then the tiger visits the rabbit. If someone is green and they do not visit the rabbit then the rabbit sees the tiger. The rabbit sees the rabbit.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is furry. Bob is furry. Bob is nice. Charlie is blue. Charlie is cold. Charlie is furry. Charlie is round. Gary is cold. Gary is rough. Furry people are rough. All rough people are nice. Charlie is blue.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is furry. Bob is furry. Bob is nice. Charlie is blue. Charlie is cold. Charlie is furry. Charlie is round. Gary is cold. Gary is rough. Furry people are rough. All rough people are nice. Bob is not furry.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is furry. Bob is furry. Bob is nice. Charlie is blue. Charlie is cold. Charlie is furry. Charlie is round. Gary is cold. Gary is rough. Furry people are rough. All rough people are nice. Anne is blue.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is quiet. Dave is red. Erin is red. Harry is blue. Blue things are white. Dave is red.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is quiet. Dave is red. Erin is red. Harry is blue. Blue things are white. Erin is not red.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is quiet. Dave is red. Erin is red. Harry is blue. Blue things are white. Erin is not white.",
+          "output": "entailment"
+        },
+        {
+          "input": "Dave is cold. Dave is kind. Dave is quiet. Dave is rough. Dave is smart. Dave is white. Dave is young. Erin is cold. Erin is kind. Erin is not quiet. Erin is rough. Erin is smart. Erin is not white. Erin is young. If something is not kind then it is rough. Young, white things are smart. If Dave is young then Dave is quiet. Erin is kind.",
+          "output": "entailment"
+        },
+        {
+          "input": "Dave is cold. Dave is kind. Dave is quiet. Dave is rough. Dave is smart. Dave is white. Dave is young. Erin is cold. Erin is kind. Erin is not quiet. Erin is rough. Erin is smart. Erin is not white. Erin is young. If something is not kind then it is rough. Young, white things are smart. If Dave is young then Dave is quiet. Dave is not cold.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle is young. The lion needs the bald eagle. The lion needs the mouse. The lion sees the bald eagle. The lion visits the bald eagle. The mouse is nice. The mouse needs the lion. If something visits the lion then the lion is not rough. If the lion needs the mouse then the lion visits the bald eagle. If something is rough then it visits the mouse. If the lion is big then the lion needs the mouse. If something is nice and it does not see the bald eagle then it needs the mouse. If the mouse visits the bald eagle and the lion does not need the mouse then the bald eagle needs the lion. The lion needs the mouse.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle is young. The lion needs the bald eagle. The lion needs the mouse. The lion sees the bald eagle. The lion visits the bald eagle. The mouse is nice. The mouse needs the lion. If something visits the lion then the lion is not rough. If the lion needs the mouse then the lion visits the bald eagle. If something is rough then it visits the mouse. If the lion is big then the lion needs the mouse. If something is nice and it does not see the bald eagle then it needs the mouse. If the mouse visits the bald eagle and the lion does not need the mouse then the bald eagle needs the lion. The lion does not visit the bald eagle.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle is young. The lion needs the bald eagle. The lion needs the mouse. The lion sees the bald eagle. The lion visits the bald eagle. The mouse is nice. The mouse needs the lion. If something visits the lion then the lion is not rough. If the lion needs the mouse then the lion visits the bald eagle. If something is rough then it visits the mouse. If the lion is big then the lion needs the mouse. If something is nice and it does not see the bald eagle then it needs the mouse. If the mouse visits the bald eagle and the lion does not need the mouse then the bald eagle needs the lion. The mouse does not visit the mouse.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle is young. The lion needs the bald eagle. The lion needs the mouse. The lion sees the bald eagle. The lion visits the bald eagle. The mouse is nice. The mouse needs the lion. If something visits the lion then the lion is not rough. If the lion needs the mouse then the lion visits the bald eagle. If something is rough then it visits the mouse. If the lion is big then the lion needs the mouse. If something is nice and it does not see the bald eagle then it needs the mouse. If the mouse visits the bald eagle and the lion does not need the mouse then the bald eagle needs the lion. The lion sees the lion.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is furry. Anne is rough. If someone is not furry then they are rough. Kind people are rough. All cold people are green. If someone is green and not cold then they are not red. Green, quiet people are not cold. If someone is quiet and not rough then they are kind. Anne is furry.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is furry. Anne is rough. If someone is not furry then they are rough. Kind people are rough. All cold people are green. If someone is green and not cold then they are not red. Green, quiet people are not cold. If someone is quiet and not rough then they are kind. Anne is not furry.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Fiona is blue. Fiona is furry. Fiona is green. Fiona is kind. Fiona is red. Fiona is rough. Fiona is young. Harry is blue. Harry is furry. Harry is green. Harry is kind. Harry is red. Harry is rough. Harry is young. If something is young and kind then it is rough. If something is young then it is furry. All green things are young. If something is blue and young then it is rough. All young things are furry. Blue, kind things are furry. Fiona is red.",
+          "output": "entailment"
+        },
+        {
+          "input": "Fiona is blue. Fiona is furry. Fiona is green. Fiona is kind. Fiona is red. Fiona is rough. Fiona is young. Harry is blue. Harry is furry. Harry is green. Harry is kind. Harry is red. Harry is rough. Harry is young. If something is young and kind then it is rough. If something is young then it is furry. All green things are young. If something is blue and young then it is rough. All young things are furry. Blue, kind things are furry. Harry is not green.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle chases the mouse. The bald eagle is green. The bald eagle sees the mouse. The mouse chases the bald eagle. The mouse is kind. The mouse is young. The mouse sees the tiger. The mouse visits the bald eagle. The tiger sees the bald eagle. The tiger sees the mouse. If something is green then it sees the mouse. If something chases the tiger then the tiger chases the mouse. The bald eagle is green.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle chases the mouse. The bald eagle is green. The bald eagle sees the mouse. The mouse chases the bald eagle. The mouse is kind. The mouse is young. The mouse sees the tiger. The mouse visits the bald eagle. The tiger sees the bald eagle. The tiger sees the mouse. If something is green then it sees the mouse. If something chases the tiger then the tiger chases the mouse. The mouse does not see the tiger.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle chases the mouse. The bald eagle is green. The bald eagle sees the mouse. The mouse chases the bald eagle. The mouse is kind. The mouse is young. The mouse sees the tiger. The mouse visits the bald eagle. The tiger sees the bald eagle. The tiger sees the mouse. If something is green then it sees the mouse. If something chases the tiger then the tiger chases the mouse. The tiger does not chase the mouse.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle chases the mouse. The bald eagle is green. The bald eagle sees the mouse. The mouse chases the bald eagle. The mouse is kind. The mouse is young. The mouse sees the tiger. The mouse visits the bald eagle. The tiger sees the bald eagle. The tiger sees the mouse. If something is green then it sees the mouse. If something chases the tiger then the tiger chases the mouse. The tiger is green.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle eats the squirrel. The bald eagle is big. The bald eagle is cold. The bald eagle is green. The bald eagle needs the squirrel. The squirrel chases the bald eagle. The squirrel eats the bald eagle. The squirrel is big. The squirrel is young. The squirrel needs the bald eagle. If the bald eagle needs the squirrel and the bald eagle chases the squirrel then the bald eagle is big. If something is blue and it eats the squirrel then it chases the bald eagle. The bald eagle is cold.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle eats the squirrel. The bald eagle is big. The bald eagle is cold. The bald eagle is green. The bald eagle needs the squirrel. The squirrel chases the bald eagle. The squirrel eats the bald eagle. The squirrel is big. The squirrel is young. The squirrel needs the bald eagle. If the bald eagle needs the squirrel and the bald eagle chases the squirrel then the bald eagle is big. If something is blue and it eats the squirrel then it chases the bald eagle. The bald eagle is not green.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle eats the squirrel. The bald eagle is big. The bald eagle is cold. The bald eagle is green. The bald eagle needs the squirrel. The squirrel chases the bald eagle. The squirrel eats the bald eagle. The squirrel is big. The squirrel is young. The squirrel needs the bald eagle. If the bald eagle needs the squirrel and the bald eagle chases the squirrel then the bald eagle is big. If something is blue and it eats the squirrel then it chases the bald eagle. The bald eagle does not chase the bald eagle.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle eats the squirrel. The bald eagle is big. The bald eagle is cold. The bald eagle is green. The bald eagle needs the squirrel. The squirrel chases the bald eagle. The squirrel eats the bald eagle. The squirrel is big. The squirrel is young. The squirrel needs the bald eagle. If the bald eagle needs the squirrel and the bald eagle chases the squirrel then the bald eagle is big. If something is blue and it eats the squirrel then it chases the bald eagle. The bald eagle chases the squirrel.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Dave is big. Dave is furry. Dave is green. Dave is kind. Dave is quiet. Dave is rough. Dave is white. All quiet, rough things are white. Dave is white.",
+          "output": "entailment"
+        },
+        {
+          "input": "Dave is big. Dave is furry. Dave is green. Dave is kind. Dave is quiet. Dave is rough. Dave is white. All quiet, rough things are white. Dave is not rough.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Fiona is round. Fiona is white. Fiona is young. Quiet, cold people are young. All smart, quiet people are round. If Fiona is white then Fiona is round. If someone is young then they are cold. If someone is furry then they are white. All smart people are furry. All smart people are white. All young, white people are furry. Fiona is young.",
+          "output": "entailment"
+        },
+        {
+          "input": "Fiona is round. Fiona is white. Fiona is young. Quiet, cold people are young. All smart, quiet people are round. If Fiona is white then Fiona is round. If someone is young then they are cold. If someone is furry then they are white. All smart people are furry. All smart people are white. All young, white people are furry. Fiona is not young.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Fiona is round. Fiona is white. Fiona is young. Quiet, cold people are young. All smart, quiet people are round. If Fiona is white then Fiona is round. If someone is young then they are cold. If someone is furry then they are white. All smart people are furry. All smart people are white. All young, white people are furry. Fiona is not smart.",
+          "output": "entailment"
+        },
+        {
+          "input": "Fiona is round. Fiona is white. Fiona is young. Quiet, cold people are young. All smart, quiet people are round. If Fiona is white then Fiona is round. If someone is young then they are cold. If someone is furry then they are white. All smart people are furry. All smart people are white. All young, white people are furry. Fiona is quiet.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Charlie is not big. Charlie is not green. Charlie is kind. Charlie is not nice. Charlie is quiet. Charlie is white. Fiona is not green. Fiona is kind. Fiona is not round. Harry is green. Harry is not quiet. Harry is white. All green people are big. All quiet people are round. Fiona is kind.",
+          "output": "entailment"
+        },
+        {
+          "input": "Charlie is not big. Charlie is not green. Charlie is kind. Charlie is not nice. Charlie is quiet. Charlie is white. Fiona is not green. Fiona is kind. Fiona is not round. Harry is green. Harry is not quiet. Harry is white. All green people are big. All quiet people are round. Harry is not round.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is big. Anne is cold. Anne is nice. Anne is red. Anne is rough. Anne is white. Anne is young. If something is white then it is nice. White things are big. Anne is nice.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is big. Anne is cold. Anne is nice. Anne is red. Anne is rough. Anne is white. Anne is young. If something is white then it is nice. White things are big. Anne is not red.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Charlie is green. Charlie is rough. Charlie is white. Harry is green. Harry is kind. Harry is smart. Harry is young. Rough, green people are smart. If Harry is kind then Harry is furry. Kind, smart people are young. Charlie is white.",
+          "output": "entailment"
+        },
+        {
+          "input": "Charlie is green. Charlie is rough. Charlie is white. Harry is green. Harry is kind. Harry is smart. Harry is young. Rough, green people are smart. If Harry is kind then Harry is furry. Kind, smart people are young. Harry is not smart.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Charlie is green. Charlie is rough. Charlie is white. Harry is green. Harry is kind. Harry is smart. Harry is young. Rough, green people are smart. If Harry is kind then Harry is furry. Kind, smart people are young. Charlie is not young.",
+          "output": "entailment"
+        },
+        {
+          "input": "Charlie is green. Charlie is rough. Charlie is white. Harry is green. Harry is kind. Harry is smart. Harry is young. Rough, green people are smart. If Harry is kind then Harry is furry. Kind, smart people are young. Charlie is furry.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is green. Anne is red. Fiona is cold. Fiona is green. Fiona is red. Fiona is rough. Fiona is young. If Anne is red and Anne is furry then Anne is not young. Red things are green. All cold things are green. If something is not furry then it is rough. Green, furry things are rough. If something is green then it is red. If something is not green then it is cold. If something is young and not cold then it is red. Fiona is furry.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Bob is blue. Bob is green. Bob is kind. Dave is not blue. Dave is cold. Dave is furry. Dave is kind. Dave is nice. Dave is white. Erin is white. Harry is furry. Harry is green. Harry is kind. Harry is nice. Harry is white. If Erin is cold and Erin is not green then Erin is furry. Furry things are nice. If something is furry and not nice then it is white. Harry is green.",
+          "output": "entailment"
+        },
+        {
+          "input": "Bob is blue. Bob is green. Bob is kind. Dave is not blue. Dave is cold. Dave is furry. Dave is kind. Dave is nice. Dave is white. Erin is white. Harry is furry. Harry is green. Harry is kind. Harry is nice. Harry is white. If Erin is cold and Erin is not green then Erin is furry. Furry things are nice. If something is furry and not nice then it is white. Dave is not nice.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Bob is blue. Bob is green. Bob is kind. Dave is not blue. Dave is cold. Dave is furry. Dave is kind. Dave is nice. Dave is white. Erin is white. Harry is furry. Harry is green. Harry is kind. Harry is nice. Harry is white. If Erin is cold and Erin is not green then Erin is furry. Furry things are nice. If something is furry and not nice then it is white. Erin is not nice.",
+          "output": "entailment"
+        },
+        {
+          "input": "Bob is blue. Bob is green. Bob is kind. Dave is not blue. Dave is cold. Dave is furry. Dave is kind. Dave is nice. Dave is white. Erin is white. Harry is furry. Harry is green. Harry is kind. Harry is nice. Harry is white. If Erin is cold and Erin is not green then Erin is furry. Furry things are nice. If something is furry and not nice then it is white. Bob is furry.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is furry. Anne is nice. Anne is quiet. Anne is red. Anne is round. Anne is smart. Erin is big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is furry. Harry is quiet. Harry is round. Harry is smart. All furry people are smart. Big, red people are quiet. All quiet people are smart. All nice, big people are furry. If Harry is red and Harry is furry then Harry is round. All quiet people are round. All quiet, red people are nice. If Anne is round then Anne is nice. Erin is quiet.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is furry. Anne is nice. Anne is quiet. Anne is red. Anne is round. Anne is smart. Erin is big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is furry. Harry is quiet. Harry is round. Harry is smart. All furry people are smart. Big, red people are quiet. All quiet people are smart. All nice, big people are furry. If Harry is red and Harry is furry then Harry is round. All quiet people are round. All quiet, red people are nice. If Anne is round then Anne is nice. Erin is not quiet.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is furry. Anne is nice. Anne is quiet. Anne is red. Anne is round. Anne is smart. Erin is big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is furry. Harry is quiet. Harry is round. Harry is smart. All furry people are smart. Big, red people are quiet. All quiet people are smart. All nice, big people are furry. If Harry is red and Harry is furry then Harry is round. All quiet people are round. All quiet, red people are nice. If Anne is round then Anne is nice. Harry is not nice.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is furry. Anne is nice. Anne is quiet. Anne is red. Anne is round. Anne is smart. Erin is big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is furry. Harry is quiet. Harry is round. Harry is smart. All furry people are smart. Big, red people are quiet. All quiet people are smart. All nice, big people are furry. If Harry is red and Harry is furry then Harry is round. All quiet people are round. All quiet, red people are nice. If Anne is round then Anne is nice. Anne is big.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Dave is cold. Dave is furry. Dave is green. Dave is nice. Dave is red. Dave is rough. Dave is young. Harry is cold. Harry is furry. Harry is green. Harry is nice. Harry is red. Harry is rough. Harry is young. All rough, cold people are furry. Harry is cold.",
+          "output": "entailment"
+        },
+        {
+          "input": "Dave is cold. Dave is furry. Dave is green. Dave is nice. Dave is red. Dave is rough. Dave is young. Harry is cold. Harry is furry. Harry is green. Harry is nice. Harry is red. Harry is rough. Harry is young. All rough, cold people are furry. Harry is not red.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The tiger is big. The tiger is blue. The tiger is not green. The tiger is red. The tiger is young. If someone is red and not big then they are blue. Big, red people are blue. All young people are red. The tiger is young.",
+          "output": "entailment"
+        },
+        {
+          "input": "The tiger is big. The tiger is blue. The tiger is not green. The tiger is red. The tiger is young. If someone is red and not big then they are blue. Big, red people are blue. All young people are red. The tiger is not blue.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle eats the bear. The bald eagle is big. The bald eagle is nice. The bald eagle likes the bear. The bear eats the bald eagle. The bear is red. The bear likes the bald eagle. All big things are round. The bear likes the bald eagle.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle eats the bear. The bald eagle is big. The bald eagle is nice. The bald eagle likes the bear. The bear eats the bald eagle. The bear is red. The bear likes the bald eagle. All big things are round. The bear does not eat the bald eagle.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle eats the bear. The bald eagle is big. The bald eagle is nice. The bald eagle likes the bear. The bear eats the bald eagle. The bear is red. The bear likes the bald eagle. All big things are round. The bear is not round.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle does not chase the mouse. The bald eagle eats the mouse. The bald eagle is green. The bald eagle is round. The bald eagle is young. The bald eagle needs the mouse. The mouse chases the bald eagle. The mouse eats the bald eagle. The mouse is green. The mouse is kind. The mouse is round. The mouse needs the bald eagle. If someone eats the mouse and the mouse needs the bald eagle then the bald eagle eats the mouse. If someone chases the bald eagle then the bald eagle eats the mouse. If someone is cold then they eat the mouse. If someone eats the mouse and the mouse is round then they need the mouse. If someone eats the mouse then they eat the bald eagle. If the mouse needs the bald eagle and the bald eagle chases the mouse then the mouse does not chase the bald eagle. If someone is not green and they do not chase the bald eagle then the bald eagle does not need the mouse. If someone is kind and they do not eat the mouse then the mouse eats the bald eagle. The mouse is kind.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle does not chase the mouse. The bald eagle eats the mouse. The bald eagle is green. The bald eagle is round. The bald eagle is young. The bald eagle needs the mouse. The mouse chases the bald eagle. The mouse eats the bald eagle. The mouse is green. The mouse is kind. The mouse is round. The mouse needs the bald eagle. If someone eats the mouse and the mouse needs the bald eagle then the bald eagle eats the mouse. If someone chases the bald eagle then the bald eagle eats the mouse. If someone is cold then they eat the mouse. If someone eats the mouse and the mouse is round then they need the mouse. If someone eats the mouse then they eat the bald eagle. If the mouse needs the bald eagle and the bald eagle chases the mouse then the mouse does not chase the bald eagle. If someone is not green and they do not chase the bald eagle then the bald eagle does not need the mouse. If someone is kind and they do not eat the mouse then the mouse eats the bald eagle. The bald eagle does not eat the mouse.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle does not chase the mouse. The bald eagle eats the mouse. The bald eagle is green. The bald eagle is round. The bald eagle is young. The bald eagle needs the mouse. The mouse chases the bald eagle. The mouse eats the bald eagle. The mouse is green. The mouse is kind. The mouse is round. The mouse needs the bald eagle. If someone eats the mouse and the mouse needs the bald eagle then the bald eagle eats the mouse. If someone chases the bald eagle then the bald eagle eats the mouse. If someone is cold then they eat the mouse. If someone eats the mouse and the mouse is round then they need the mouse. If someone eats the mouse then they eat the bald eagle. If the mouse needs the bald eagle and the bald eagle chases the mouse then the mouse does not chase the bald eagle. If someone is not green and they do not chase the bald eagle then the bald eagle does not need the mouse. If someone is kind and they do not eat the mouse then the mouse eats the bald eagle. The mouse does not eat the mouse.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle does not chase the mouse. The bald eagle eats the mouse. The bald eagle is green. The bald eagle is round. The bald eagle is young. The bald eagle needs the mouse. The mouse chases the bald eagle. The mouse eats the bald eagle. The mouse is green. The mouse is kind. The mouse is round. The mouse needs the bald eagle. If someone eats the mouse and the mouse needs the bald eagle then the bald eagle eats the mouse. If someone chases the bald eagle then the bald eagle eats the mouse. If someone is cold then they eat the mouse. If someone eats the mouse and the mouse is round then they need the mouse. If someone eats the mouse then they eat the bald eagle. If the mouse needs the bald eagle and the bald eagle chases the mouse then the mouse does not chase the bald eagle. If someone is not green and they do not chase the bald eagle then the bald eagle does not need the mouse. If someone is kind and they do not eat the mouse then the mouse eats the bald eagle. The bald eagle chases the bald eagle.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Bob is smart. Charlie is rough. Dave is kind. Fiona is kind. If something is kind and cold then it is furry. If something is kind and rough then it is cold. If Bob is kind and Bob is smart then Bob is big. All smart, kind things are red. Furry things are smart. All furry things are smart. Dave is kind.",
+          "output": "entailment"
+        },
+        {
+          "input": "Bob is smart. Charlie is rough. Dave is kind. Fiona is kind. If something is kind and cold then it is furry. If something is kind and rough then it is cold. If Bob is kind and Bob is smart then Bob is big. All smart, kind things are red. Furry things are smart. All furry things are smart. Dave is not kind.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Bob is smart. Charlie is rough. Dave is kind. Fiona is kind. If something is kind and cold then it is furry. If something is kind and rough then it is cold. If Bob is kind and Bob is smart then Bob is big. All smart, kind things are red. Furry things are smart. All furry things are smart. Charlie is not cold.",
+          "output": "entailment"
+        },
+        {
+          "input": "Bob is smart. Charlie is rough. Dave is kind. Fiona is kind. If something is kind and cold then it is furry. If something is kind and rough then it is cold. If Bob is kind and Bob is smart then Bob is big. All smart, kind things are red. Furry things are smart. All furry things are smart. Bob is rough.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is green. Erin is white. Harry is white. All rough, round things are cold. If something is cold and round then it is white. Round, green things are cold. If something is cold and round then it is white. If something is round and rough then it is green. If Anne is cold then Anne is green. Green things are kind. Rough things are white. Erin is white.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is green. Erin is white. Harry is white. All rough, round things are cold. If something is cold and round then it is white. Round, green things are cold. If something is cold and round then it is white. If something is round and rough then it is green. If Anne is cold then Anne is green. Green things are kind. Rough things are white. Harry is not white.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is green. Erin is white. Harry is white. All rough, round things are cold. If something is cold and round then it is white. Round, green things are cold. If something is cold and round then it is white. If something is round and rough then it is green. If Anne is cold then Anne is green. Green things are kind. Rough things are white. Harry is not cold.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is green. Erin is white. Harry is white. All rough, round things are cold. If something is cold and round then it is white. Round, green things are cold. If something is cold and round then it is white. If something is round and rough then it is green. If Anne is cold then Anne is green. Green things are kind. Rough things are white. Anne is round.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Bob is smart. Dave is furry. Harry is quiet. If something is big and nice then it is cold. All cold, rough things are quiet. All cold things are furry. Bob is smart.",
+          "output": "entailment"
+        },
+        {
+          "input": "Bob is smart. Dave is furry. Harry is quiet. If something is big and nice then it is cold. All cold, rough things are quiet. All cold things are furry. Dave is not furry.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Bob is smart. Dave is furry. Harry is quiet. If something is big and nice then it is cold. All cold, rough things are quiet. All cold things are furry. Harry is not cold.",
+          "output": "entailment"
+        },
+        {
+          "input": "Bob is smart. Dave is furry. Harry is quiet. If something is big and nice then it is cold. All cold, rough things are quiet. All cold things are furry. Dave is rough.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The dog is big. The dog is cold. The dog is green. The dog is nice. The dog likes the mouse. The dog needs the mouse. The dog visits the mouse. The mouse is big. The mouse is cold. The mouse is green. The mouse is nice. The mouse is round. The mouse likes the dog. The mouse needs the dog. The mouse visits the dog. If something needs the mouse then it is nice. If something is nice then it is green. If something needs the mouse then it is round. The dog is green.",
+          "output": "entailment"
+        },
+        {
+          "input": "The dog is big. The dog is cold. The dog is green. The dog is nice. The dog likes the mouse. The dog needs the mouse. The dog visits the mouse. The mouse is big. The mouse is cold. The mouse is green. The mouse is nice. The mouse is round. The mouse likes the dog. The mouse needs the dog. The mouse visits the dog. If something needs the mouse then it is nice. If something is nice then it is green. If something needs the mouse then it is round. The mouse does not like the dog.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The dog is big. The dog is cold. The dog is green. The dog is nice. The dog likes the mouse. The dog needs the mouse. The dog visits the mouse. The mouse is big. The mouse is cold. The mouse is green. The mouse is nice. The mouse is round. The mouse likes the dog. The mouse needs the dog. The mouse visits the dog. If something needs the mouse then it is nice. If something is nice then it is green. If something needs the mouse then it is round. The mouse does not visit the mouse.",
+          "output": "entailment"
+        },
+        {
+          "input": "The dog is big. The dog is cold. The dog is green. The dog is nice. The dog likes the mouse. The dog needs the mouse. The dog visits the mouse. The mouse is big. The mouse is cold. The mouse is green. The mouse is nice. The mouse is round. The mouse likes the dog. The mouse needs the dog. The mouse visits the dog. If something needs the mouse then it is nice. If something is nice then it is green. If something needs the mouse then it is round. The mouse likes the mouse.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Charlie is kind. If something is white and not kind then it is quiet. If something is rough then it is round. If something is quiet and not nice then it is not kind. All green things are not kind. All round, quiet things are white. If Charlie is white then Charlie is not green. Charlie is kind.",
+          "output": "entailment"
+        },
+        {
+          "input": "Charlie is kind. If something is white and not kind then it is quiet. If something is rough then it is round. If something is quiet and not nice then it is not kind. All green things are not kind. All round, quiet things are white. If Charlie is white then Charlie is not green. Charlie is not kind.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Charlie is kind. If something is white and not kind then it is quiet. If something is rough then it is round. If something is quiet and not nice then it is not kind. All green things are not kind. All round, quiet things are white. If Charlie is white then Charlie is not green. Charlie is not quiet.",
+          "output": "entailment"
+        },
+        {
+          "input": "Charlie is kind. If something is white and not kind then it is quiet. If something is rough then it is round. If something is quiet and not nice then it is not kind. All green things are not kind. All round, quiet things are white. If Charlie is white then Charlie is not green. Charlie is green.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is big. Anne is blue. Anne is furry. Bob is big. Bob is cold. Dave is blue. Dave is cold. Dave is kind. Dave is quiet. Fiona is white. Cold people are furry. Kind people are white. If Anne is quiet then Anne is white. If someone is white then they are big. All cold, blue people are furry. All quiet people are cold. All quiet, white people are big. If someone is quiet then they are kind. Bob is cold.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is big. Anne is blue. Anne is furry. Bob is big. Bob is cold. Dave is blue. Dave is cold. Dave is kind. Dave is quiet. Fiona is white. Cold people are furry. Kind people are white. If Anne is quiet then Anne is white. If someone is white then they are big. All cold, blue people are furry. All quiet people are cold. All quiet, white people are big. If someone is quiet then they are kind. Bob is not cold.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is big. Anne is blue. Anne is furry. Bob is big. Bob is cold. Dave is blue. Dave is cold. Dave is kind. Dave is quiet. Fiona is white. Cold people are furry. Kind people are white. If Anne is quiet then Anne is white. If someone is white then they are big. All cold, blue people are furry. All quiet people are cold. All quiet, white people are big. If someone is quiet then they are kind. Anne is not cold.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is big. Anne is blue. Anne is furry. Bob is big. Bob is cold. Dave is blue. Dave is cold. Dave is kind. Dave is quiet. Fiona is white. Cold people are furry. Kind people are white. If Anne is quiet then Anne is white. If someone is white then they are big. All cold, blue people are furry. All quiet people are cold. All quiet, white people are big. If someone is quiet then they are kind. Fiona is blue.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Charlie is nice. Charlie is round. Dave is blue. Dave is cold. Dave is furry. Dave is nice. Dave is red. Dave is round. Dave is white. Harry is blue. Harry is cold. Harry is not furry. Harry is nice. Harry is red. Harry is not round. Harry is white. If Charlie is nice and Charlie is furry then Charlie is blue. If someone is blue then they are nice. If someone is furry then they are red. If Dave is white and Dave is not round then Dave is furry. If someone is nice and not white then they are furry. If Dave is not red then Dave is not blue. Dave is cold.",
+          "output": "entailment"
+        },
+        {
+          "input": "Charlie is nice. Charlie is round. Dave is blue. Dave is cold. Dave is furry. Dave is nice. Dave is red. Dave is round. Dave is white. Harry is blue. Harry is cold. Harry is not furry. Harry is nice. Harry is red. Harry is not round. Harry is white. If Charlie is nice and Charlie is furry then Charlie is blue. If someone is blue then they are nice. If someone is furry then they are red. If Dave is white and Dave is not round then Dave is furry. If someone is nice and not white then they are furry. If Dave is not red then Dave is not blue. Harry is furry.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Charlie is nice. Charlie is round. Dave is blue. Dave is cold. Dave is furry. Dave is nice. Dave is red. Dave is round. Dave is white. Harry is blue. Harry is cold. Harry is not furry. Harry is nice. Harry is red. Harry is not round. Harry is white. If Charlie is nice and Charlie is furry then Charlie is blue. If someone is blue then they are nice. If someone is furry then they are red. If Dave is white and Dave is not round then Dave is furry. If someone is nice and not white then they are furry. If Dave is not red then Dave is not blue. Charlie is not white.",
+          "output": "entailment"
+        },
+        {
+          "input": "Charlie is nice. Charlie is round. Dave is blue. Dave is cold. Dave is furry. Dave is nice. Dave is red. Dave is round. Dave is white. Harry is blue. Harry is cold. Harry is not furry. Harry is nice. Harry is red. Harry is not round. Harry is white. If Charlie is nice and Charlie is furry then Charlie is blue. If someone is blue then they are nice. If someone is furry then they are red. If Dave is white and Dave is not round then Dave is furry. If someone is nice and not white then they are furry. If Dave is not red then Dave is not blue. Charlie is cold.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The mouse is blue. The mouse is not cold. The mouse is green. The mouse is round. The mouse is young. Green, cold people are not blue. The mouse is round.",
+          "output": "entailment"
+        },
+        {
+          "input": "The mouse is blue. The mouse is not cold. The mouse is green. The mouse is round. The mouse is young. Green, cold people are not blue. The mouse is not young.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Bob is cold. Bob is furry. Bob is rough. Bob is young. Charlie is round. Charlie is young. Erin is cold. Erin is furry. Erin is nice. Erin is rough. Erin is round. Erin is young. Fiona is cold. Fiona is furry. Fiona is nice. If someone is quiet and furry then they are young. If someone is nice and quiet then they are furry. All quiet people are cold. Furry, quiet people are rough. If someone is quiet then they are furry. All round, rough people are nice. Bob is furry.",
+          "output": "entailment"
+        },
+        {
+          "input": "Bob is cold. Bob is furry. Bob is rough. Bob is young. Charlie is round. Charlie is young. Erin is cold. Erin is furry. Erin is nice. Erin is rough. Erin is round. Erin is young. Fiona is cold. Fiona is furry. Fiona is nice. If someone is quiet and furry then they are young. If someone is nice and quiet then they are furry. All quiet people are cold. Furry, quiet people are rough. If someone is quiet then they are furry. All round, rough people are nice. Bob is not rough.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Bob is cold. Bob is furry. Bob is rough. Bob is young. Charlie is round. Charlie is young. Erin is cold. Erin is furry. Erin is nice. Erin is rough. Erin is round. Erin is young. Fiona is cold. Fiona is furry. Fiona is nice. If someone is quiet and furry then they are young. If someone is nice and quiet then they are furry. All quiet people are cold. Furry, quiet people are rough. If someone is quiet then they are furry. All round, rough people are nice. Charlie is not cold.",
+          "output": "entailment"
+        },
+        {
+          "input": "Bob is cold. Bob is furry. Bob is rough. Bob is young. Charlie is round. Charlie is young. Erin is cold. Erin is furry. Erin is nice. Erin is rough. Erin is round. Erin is young. Fiona is cold. Fiona is furry. Fiona is nice. If someone is quiet and furry then they are young. If someone is nice and quiet then they are furry. All quiet people are cold. Furry, quiet people are rough. If someone is quiet then they are furry. All round, rough people are nice. Fiona is round.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Charlie is blue. Charlie is kind. Charlie is nice. Charlie is round. Charlie is smart. Dave is blue. Dave is kind. Dave is not nice. Dave is rough. Dave is round. All white, blue people are not smart. If someone is blue and not smart then they are kind. All nice people are blue. Dave is kind.",
+          "output": "entailment"
+        },
+        {
+          "input": "Charlie is blue. Charlie is kind. Charlie is nice. Charlie is round. Charlie is smart. Dave is blue. Dave is kind. Dave is not nice. Dave is rough. Dave is round. All white, blue people are not smart. If someone is blue and not smart then they are kind. All nice people are blue. Charlie is not blue.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Charlie is blue. Charlie is kind. Charlie is nice. Charlie is round. Charlie is smart. Dave is blue. Dave is kind. Dave is not nice. Dave is rough. Dave is round. All white, blue people are not smart. If someone is blue and not smart then they are kind. All nice people are blue. Charlie is not white.",
+          "output": "entailment"
+        },
+        {
+          "input": "Charlie is blue. Charlie is kind. Charlie is nice. Charlie is round. Charlie is smart. Dave is blue. Dave is kind. Dave is not nice. Dave is rough. Dave is round. All white, blue people are not smart. If someone is blue and not smart then they are kind. All nice people are blue. Charlie is rough.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is kind. Anne is rough. Anne is white. Dave is blue. Dave is green. Dave is kind. Dave is rough. Dave is white. Erin is blue. Erin is green. Erin is kind. Erin is red. Gary is kind. Gary is red. Gary is white. All kind people are blue. If someone is white then they are red. Erin is green.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is kind. Anne is rough. Anne is white. Dave is blue. Dave is green. Dave is kind. Dave is rough. Dave is white. Erin is blue. Erin is green. Erin is kind. Erin is red. Gary is kind. Gary is red. Gary is white. All kind people are blue. If someone is white then they are red. Erin is not blue.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is kind. Anne is rough. Anne is white. Dave is blue. Dave is green. Dave is kind. Dave is rough. Dave is white. Erin is blue. Erin is green. Erin is kind. Erin is red. Gary is kind. Gary is red. Gary is white. All kind people are blue. If someone is white then they are red. Erin is not white.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is cold. Anne is kind. Anne is rough. Anne is white. Dave is blue. Dave is green. Dave is kind. Dave is rough. Dave is white. Erin is blue. Erin is green. Erin is kind. Erin is red. Gary is kind. Gary is red. Gary is white. All kind people are blue. If someone is white then they are red. Gary is cold.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Harry is kind. Harry is rough. Harry is smart. All big people are cold. Harry is smart.",
+          "output": "entailment"
+        },
+        {
+          "input": "Harry is kind. Harry is rough. Harry is smart. All big people are cold. Harry is not smart.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Harry is kind. Harry is rough. Harry is smart. All big people are cold. Harry is not cold.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is big. Anne is blue. Anne is green. Anne is kind. Anne is not nice. Bob is big. Bob is blue. Bob is not green. Bob is kind. Bob is not rough. Bob is not white. Fiona is blue. Fiona is green. Fiona is rough. Fiona is not white. Gary is not white. If something is blue and not kind then it is green. Rough things are blue. Rough things are blue. If something is white and not kind then it is nice. If Gary is rough and Gary is not nice then Gary is not big. If something is not nice then it is big. If something is not big then it is blue. If Fiona is nice and Fiona is not blue then Fiona is rough. Anne is kind.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is big. Anne is blue. Anne is green. Anne is kind. Anne is not nice. Bob is big. Bob is blue. Bob is not green. Bob is kind. Bob is not rough. Bob is not white. Fiona is blue. Fiona is green. Fiona is rough. Fiona is not white. Gary is not white. If something is blue and not kind then it is green. Rough things are blue. Rough things are blue. If something is white and not kind then it is nice. If Gary is rough and Gary is not nice then Gary is not big. If something is not nice then it is big. If something is not big then it is blue. If Fiona is nice and Fiona is not blue then Fiona is rough. Bob is rough.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is big. Anne is blue. Anne is green. Anne is kind. Anne is not nice. Bob is big. Bob is blue. Bob is not green. Bob is kind. Bob is not rough. Bob is not white. Fiona is blue. Fiona is green. Fiona is rough. Fiona is not white. Gary is not white. If something is blue and not kind then it is green. Rough things are blue. Rough things are blue. If something is white and not kind then it is nice. If Gary is rough and Gary is not nice then Gary is not big. If something is not nice then it is big. If something is not big then it is blue. If Fiona is nice and Fiona is not blue then Fiona is rough. Bob is not nice.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is big. Anne is blue. Anne is green. Anne is kind. Anne is not nice. Bob is big. Bob is blue. Bob is not green. Bob is kind. Bob is not rough. Bob is not white. Fiona is blue. Fiona is green. Fiona is rough. Fiona is not white. Gary is not white. If something is blue and not kind then it is green. Rough things are blue. Rough things are blue. If something is white and not kind then it is nice. If Gary is rough and Gary is not nice then Gary is not big. If something is not nice then it is big. If something is not big then it is blue. If Fiona is nice and Fiona is not blue then Fiona is rough. Gary is rough.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is not big. Erin is not blue. Erin is furry. If Anne is big and Anne is quiet then Anne is kind. If Anne is kind and Anne is smart then Anne is not big. Furry, quiet things are rough. If Erin is rough and Erin is not big then Erin is kind. If something is blue then it is smart. If something is not rough then it is kind. Anne is not big.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is not big. Erin is not blue. Erin is furry. If Anne is big and Anne is quiet then Anne is kind. If Anne is kind and Anne is smart then Anne is not big. Furry, quiet things are rough. If Erin is rough and Erin is not big then Erin is kind. If something is blue then it is smart. If something is not rough then it is kind. Erin is blue.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is not big. Erin is not blue. Erin is furry. If Anne is big and Anne is quiet then Anne is kind. If Anne is kind and Anne is smart then Anne is not big. Furry, quiet things are rough. If Erin is rough and Erin is not big then Erin is kind. If something is blue then it is smart. If something is not rough then it is kind. Anne is not smart.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is not big. Erin is not blue. Erin is furry. If Anne is big and Anne is quiet then Anne is kind. If Anne is kind and Anne is smart then Anne is not big. Furry, quiet things are rough. If Erin is rough and Erin is not big then Erin is kind. If something is blue then it is smart. If something is not rough then it is kind. Anne is blue.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Charlie is big. Charlie is blue. Charlie is quiet. Charlie is round. Charlie is smart. Charlie is white. Charlie is young. If someone is big and not quiet then they are not white. All round people are blue. If someone is young and blue then they are big. If Charlie is round then Charlie is big. All smart, white people are young. If someone is white and not quiet then they are not blue. Charlie is not quiet.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bear chases the lion. The bear does not eat the lion. The bear is cold. The bear is green. The bear is not nice. The bear is not rough. The bear is round. The bear likes the lion. The lion chases the bear. The lion eats the bear. The lion is cold. The lion is green. The lion is not rough. The lion is round. The lion likes the bear. If something is nice and it chases the lion then the lion likes the bear. The lion chases the bear.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bear chases the lion. The bear does not eat the lion. The bear is cold. The bear is green. The bear is not nice. The bear is not rough. The bear is round. The bear likes the lion. The lion chases the bear. The lion eats the bear. The lion is cold. The lion is green. The lion is not rough. The lion is round. The lion likes the bear. If something is nice and it chases the lion then the lion likes the bear. The bear is not cold.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bear chases the lion. The bear does not eat the lion. The bear is cold. The bear is green. The bear is not nice. The bear is not rough. The bear is round. The bear likes the lion. The lion chases the bear. The lion eats the bear. The lion is cold. The lion is green. The lion is not rough. The lion is round. The lion likes the bear. If something is nice and it chases the lion then the lion likes the bear. The lion does not chase the lion.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bear chases the lion. The bear does not eat the lion. The bear is cold. The bear is green. The bear is not nice. The bear is not rough. The bear is round. The bear likes the lion. The lion chases the bear. The lion eats the bear. The lion is cold. The lion is green. The lion is not rough. The lion is round. The lion likes the bear. If something is nice and it chases the lion then the lion likes the bear. The bear eats the bear.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The rabbit is blue. The rabbit is green. The rabbit is red. All nice people are not blue. If the rabbit is green then the rabbit is rough. The rabbit is green.",
+          "output": "entailment"
+        },
+        {
+          "input": "The rabbit is blue. The rabbit is green. The rabbit is red. All nice people are not blue. If the rabbit is green then the rabbit is rough. The rabbit is not red.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The mouse is blue. The mouse is green. The mouse is young. All rough, young things are not green. All cold, rough things are not green. If something is rough and not cold then it is not blue. If something is young and cold then it is blue. If something is green and not cold then it is young. If something is not blue then it is rough. If something is not cold and not rough then it is young. If the mouse is rough and the mouse is not young then the mouse is green. The mouse is cold.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Bob is cold. Bob is furry. Bob is red. Bob is rough. Bob is round. Bob is smart. Bob is not young. Dave is cold. Dave is furry. Dave is red. Dave is smart. Dave is young. If something is not furry then it is red. If Dave is not rough then Dave is cold. If something is cold and not round then it is red. If Bob is round and Bob is not rough then Bob is not young. If something is red and not rough then it is cold. If something is rough then it is red. Bob is not young.",
+          "output": "entailment"
+        },
+        {
+          "input": "Bob is cold. Bob is furry. Bob is red. Bob is rough. Bob is round. Bob is smart. Bob is not young. Dave is cold. Dave is furry. Dave is red. Dave is smart. Dave is young. If something is not furry then it is red. If Dave is not rough then Dave is cold. If something is cold and not round then it is red. If Bob is round and Bob is not rough then Bob is not young. If something is red and not rough then it is cold. If something is rough then it is red. Dave is not cold.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Bob is cold. Bob is furry. Bob is red. Bob is rough. Bob is round. Bob is smart. Bob is not young. Dave is cold. Dave is furry. Dave is red. Dave is smart. Dave is young. If something is not furry then it is red. If Dave is not rough then Dave is cold. If something is cold and not round then it is red. If Bob is round and Bob is not rough then Bob is not young. If something is red and not rough then it is cold. If something is rough then it is red. Dave is not round.",
+          "output": "entailment"
+        },
+        {
+          "input": "Bob is cold. Bob is furry. Bob is red. Bob is rough. Bob is round. Bob is smart. Bob is not young. Dave is cold. Dave is furry. Dave is red. Dave is smart. Dave is young. If something is not furry then it is red. If Dave is not rough then Dave is cold. If something is cold and not round then it is red. If Bob is round and Bob is not rough then Bob is not young. If something is red and not rough then it is cold. If something is rough then it is red. Dave is rough.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is big. Anne is cold. Anne is nice. Anne is round. Anne is smart. Fiona is big. Fiona is blue. Fiona is nice. Fiona is rough. Fiona is round. Gary is blue. Gary is cold. Gary is rough. Gary is round. Gary is smart. All big, round people are smart. If Fiona is cold then Fiona is blue. If someone is round then they are smart. If someone is blue and smart then they are big. If someone is blue then they are round. Blue people are nice. Gary is blue.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is big. Anne is cold. Anne is nice. Anne is round. Anne is smart. Fiona is big. Fiona is blue. Fiona is nice. Fiona is rough. Fiona is round. Gary is blue. Gary is cold. Gary is rough. Gary is round. Gary is smart. All big, round people are smart. If Fiona is cold then Fiona is blue. If someone is round then they are smart. If someone is blue and smart then they are big. If someone is blue then they are round. Blue people are nice. Gary is not smart.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is big. Anne is cold. Anne is nice. Anne is round. Anne is smart. Fiona is big. Fiona is blue. Fiona is nice. Fiona is rough. Fiona is round. Gary is blue. Gary is cold. Gary is rough. Gary is round. Gary is smart. All big, round people are smart. If Fiona is cold then Fiona is blue. If someone is round then they are smart. If someone is blue and smart then they are big. If someone is blue then they are round. Blue people are nice. Anne is not blue.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is big. Anne is cold. Anne is nice. Anne is round. Anne is smart. Fiona is big. Fiona is blue. Fiona is nice. Fiona is rough. Fiona is round. Gary is blue. Gary is cold. Gary is rough. Gary is round. Gary is smart. All big, round people are smart. If Fiona is cold then Fiona is blue. If someone is round then they are smart. If someone is blue and smart then they are big. If someone is blue then they are round. Blue people are nice. Fiona is cold.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle likes the cow. The bald eagle likes the rabbit. The bald eagle needs the dog. The bald eagle visits the rabbit. The cow is not nice. The cow is not rough. The cow needs the dog. The dog is green. The dog is kind. The dog likes the bald eagle. The dog likes the rabbit. The dog needs the bald eagle. The rabbit is kind. The rabbit is nice. The rabbit visits the cow. If the dog needs the cow then the cow is rough. If the dog visits the rabbit and the rabbit visits the cow then the rabbit visits the bald eagle. If someone visits the dog and the dog does not need the rabbit then the dog is not nice. If someone does not need the rabbit then the rabbit visits the dog. If the dog likes the bald eagle then the bald eagle visits the rabbit. If someone visits the cow then the cow does not like the bald eagle. If someone visits the rabbit and they need the cow then the cow is not rough. If the bald eagle needs the cow then the cow is young. The rabbit is nice.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle likes the cow. The bald eagle likes the rabbit. The bald eagle needs the dog. The bald eagle visits the rabbit. The cow is not nice. The cow is not rough. The cow needs the dog. The dog is green. The dog is kind. The dog likes the bald eagle. The dog likes the rabbit. The dog needs the bald eagle. The rabbit is kind. The rabbit is nice. The rabbit visits the cow. If the dog needs the cow then the cow is rough. If the dog visits the rabbit and the rabbit visits the cow then the rabbit visits the bald eagle. If someone visits the dog and the dog does not need the rabbit then the dog is not nice. If someone does not need the rabbit then the rabbit visits the dog. If the dog likes the bald eagle then the bald eagle visits the rabbit. If someone visits the cow then the cow does not like the bald eagle. If someone visits the rabbit and they need the cow then the cow is not rough. If the bald eagle needs the cow then the cow is young. The dog is not kind.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bald eagle likes the cow. The bald eagle likes the rabbit. The bald eagle needs the dog. The bald eagle visits the rabbit. The cow is not nice. The cow is not rough. The cow needs the dog. The dog is green. The dog is kind. The dog likes the bald eagle. The dog likes the rabbit. The dog needs the bald eagle. The rabbit is kind. The rabbit is nice. The rabbit visits the cow. If the dog needs the cow then the cow is rough. If the dog visits the rabbit and the rabbit visits the cow then the rabbit visits the bald eagle. If someone visits the dog and the dog does not need the rabbit then the dog is not nice. If someone does not need the rabbit then the rabbit visits the dog. If the dog likes the bald eagle then the bald eagle visits the rabbit. If someone visits the cow then the cow does not like the bald eagle. If someone visits the rabbit and they need the cow then the cow is not rough. If the bald eagle needs the cow then the cow is young. The cow is not young.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bald eagle likes the cow. The bald eagle likes the rabbit. The bald eagle needs the dog. The bald eagle visits the rabbit. The cow is not nice. The cow is not rough. The cow needs the dog. The dog is green. The dog is kind. The dog likes the bald eagle. The dog likes the rabbit. The dog needs the bald eagle. The rabbit is kind. The rabbit is nice. The rabbit visits the cow. If the dog needs the cow then the cow is rough. If the dog visits the rabbit and the rabbit visits the cow then the rabbit visits the bald eagle. If someone visits the dog and the dog does not need the rabbit then the dog is not nice. If someone does not need the rabbit then the rabbit visits the dog. If the dog likes the bald eagle then the bald eagle visits the rabbit. If someone visits the cow then the cow does not like the bald eagle. If someone visits the rabbit and they need the cow then the cow is not rough. If the bald eagle needs the cow then the cow is young. The bald eagle likes the bald eagle.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The squirrel is big. The squirrel is blue. The squirrel is green. The squirrel is red. The squirrel is young. Young people are big. All green, blue people are big. If the squirrel is red then the squirrel is big. If someone is young then they are green. If someone is not big then they are young. If the squirrel is big and the squirrel is not green then the squirrel is not young. The squirrel is blue.",
+          "output": "entailment"
+        },
+        {
+          "input": "The squirrel is big. The squirrel is blue. The squirrel is green. The squirrel is red. The squirrel is young. Young people are big. All green, blue people are big. If the squirrel is red then the squirrel is big. If someone is young then they are green. If someone is not big then they are young. If the squirrel is big and the squirrel is not green then the squirrel is not young. The squirrel is not red.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is kind. Anne is quiet. Harry is white. If someone is green and blue then they are quiet. If someone is quiet then they are blue. All smart, quiet people are green. If someone is smart then they are blue. If someone is young then they are quiet. Quiet, young people are green. All quiet, green people are smart. If someone is kind and quiet then they are blue. Anne is kind.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is kind. Anne is quiet. Harry is white. If someone is green and blue then they are quiet. If someone is quiet then they are blue. All smart, quiet people are green. If someone is smart then they are blue. If someone is young then they are quiet. Quiet, young people are green. All quiet, green people are smart. If someone is kind and quiet then they are blue. Anne is not kind.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is kind. Anne is quiet. Harry is white. If someone is green and blue then they are quiet. If someone is quiet then they are blue. All smart, quiet people are green. If someone is smart then they are blue. If someone is young then they are quiet. Quiet, young people are green. All quiet, green people are smart. If someone is kind and quiet then they are blue. Anne is not green.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is kind. Anne is quiet. Harry is white. If someone is green and blue then they are quiet. If someone is quiet then they are blue. All smart, quiet people are green. If someone is smart then they are blue. If someone is young then they are quiet. Quiet, young people are green. All quiet, green people are smart. If someone is kind and quiet then they are blue. Anne is young.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bear eats the rabbit. The bear is round. The lion does not eat the rabbit. The lion is round. The rabbit does not eat the lion. The rabbit is not green. The rabbit does not see the bear. If something is big and not round then it likes the rabbit. If something eats the rabbit then the rabbit is big. If the bear sees the lion then the lion does not eat the rabbit. If something is kind and it sees the rabbit then it does not like the rabbit. If the lion is round and something does not see the lion then the lion does not eat the rabbit. If the rabbit does not eat the bear and the rabbit is not round then the bear is big. The rabbit does not see the bear.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bear eats the rabbit. The bear is round. The lion does not eat the rabbit. The lion is round. The rabbit does not eat the lion. The rabbit is not green. The rabbit does not see the bear. If something is big and not round then it likes the rabbit. If something eats the rabbit then the rabbit is big. If the bear sees the lion then the lion does not eat the rabbit. If something is kind and it sees the rabbit then it does not like the rabbit. If the lion is round and something does not see the lion then the lion does not eat the rabbit. If the rabbit does not eat the bear and the rabbit is not round then the bear is big. The bear does not eat the rabbit.",
+          "output": "not entailment"
+        },
+        {
+          "input": "The bear eats the rabbit. The bear is round. The lion does not eat the rabbit. The lion is round. The rabbit does not eat the lion. The rabbit is not green. The rabbit does not see the bear. If something is big and not round then it likes the rabbit. If something eats the rabbit then the rabbit is big. If the bear sees the lion then the lion does not eat the rabbit. If something is kind and it sees the rabbit then it does not like the rabbit. If the lion is round and something does not see the lion then the lion does not eat the rabbit. If the rabbit does not eat the bear and the rabbit is not round then the bear is big. The bear does not like the rabbit.",
+          "output": "entailment"
+        },
+        {
+          "input": "The bear eats the rabbit. The bear is round. The lion does not eat the rabbit. The lion is round. The rabbit does not eat the lion. The rabbit is not green. The rabbit does not see the bear. If something is big and not round then it likes the rabbit. If something eats the rabbit then the rabbit is big. If the bear sees the lion then the lion does not eat the rabbit. If something is kind and it sees the rabbit then it does not like the rabbit. If the lion is round and something does not see the lion then the lion does not eat the rabbit. If the rabbit does not eat the bear and the rabbit is not round then the bear is big. The rabbit eats the rabbit.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is not red. Erin is green. Fiona is big. Fiona is kind. Fiona is red. Fiona is rough. Fiona is young. Gary is not big. Gary is not kind. Gary is young. If someone is young and not green then they are rough. If someone is green and not young then they are furry. If Anne is kind and Anne is not green then Anne is not rough. Furry, big people are not red. If someone is green and kind then they are not big. If someone is not young then they are furry. Fiona is rough.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is not red. Erin is green. Fiona is big. Fiona is kind. Fiona is red. Fiona is rough. Fiona is young. Gary is not big. Gary is not kind. Gary is young. If someone is young and not green then they are rough. If someone is green and not young then they are furry. If Anne is kind and Anne is not green then Anne is not rough. Furry, big people are not red. If someone is green and kind then they are not big. If someone is not young then they are furry. Fiona is not young.",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is not red. Erin is green. Fiona is big. Fiona is kind. Fiona is red. Fiona is rough. Fiona is young. Gary is not big. Gary is not kind. Gary is young. If someone is young and not green then they are rough. If someone is green and not young then they are furry. If Anne is kind and Anne is not green then Anne is not rough. Furry, big people are not red. If someone is green and kind then they are not big. If someone is not young then they are furry. Anne is not rough.",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is not red. Erin is green. Fiona is big. Fiona is kind. Fiona is red. Fiona is rough. Fiona is young. Gary is not big. Gary is not kind. Gary is young. If someone is young and not green then they are rough. If someone is green and not young then they are furry. If Anne is kind and Anne is not green then Anne is not rough. Furry, big people are not red. If someone is green and kind then they are not big. If someone is not young then they are furry. Gary is green.",
+          "output": "not entailment"
+        }
+      ]
+    }
+  ]
+}

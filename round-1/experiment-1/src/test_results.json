@@ -1,0 +1,82 @@
+{
+  "dataset": "dummy",
+  "num_examples": 2,
+  "baseline": [
+    {
+      "example_id": "dummy_0",
+      "pipeline": "baseline",
+      "document": "Alice is a cat. Bob is a dog. Cats like mice. Dogs like bones.",
+      "problog_code": "cat(cat).\ndog(dog).\ncat(cats).\nlikes(like).\ndog(dogs).\n\nquery(related(_, _)).",
+      "execution_success": true,
+      "uncertainty": null,
+      "per_term_uncertainty": null,
+      "answer": true,
+      "question": "Does Alice like mice?"
+    },
+    {
+      "example_id": "dummy_1",
+      "pipeline": "baseline",
+      "document": "If X is a cat then X likes mice. Alice is a cat. Bob is a dog.",
+      "problog_code": "cat(cat).\nlikes(likes).\ndog(dog).\n\nquery(related(_, _)).",
+      "execution_success": true,
+      "uncertainty": null,
+      "per_term_uncertainty": null,
+      "answer": true,
+      "question": "Does Alice like mice?"
+    }
+  ],
+  "ot_enhanced": [
+    {
+      "example_id": "dummy_0",
+      "pipeline": "ot_enhanced",
+      "document": "Alice is a cat. Bob is a dog. Cats like mice. Dogs like bones.",
+      "problog_code": "0.0123::animal(alice).\n0.0123::person(alice).\n0.0123::parent(alice).\n0.0123::child(alice).\n0.0123::sibling(alice).\n0.0123::related(alice).\n0.0123::friend(alice).\n0.0123::knows(alice).\n0.0123::has(alice).\n0.0813::cat(cat).\n0.0123::animal(bob).\n0.0123::person(bob).\n0.0123::parent(bob).\n0.0123::child(bob).\n0.0123::sibling(bob).\n0.0123::related(bob).\n0.0123::friend(bob).\n0.0123::knows(bob).\n0.0123::has(bob).\n0.0813::dog(dog).\n0.0121::animal(cats).\n0.0121::person(cats).\n0.0121::parent(cats).\n0.0121::child(cats).\n0.0121::sibling(cats).\n0.0121::related(cats).\n0.0121::friend(cats).\n0.0121::knows(cats).\n0.0121::has(cats).\n0.0809::likes(like).\n0.0123::animal(mice).\n0.0123::person(mice).\n0.0123::parent(mice).\n0.0123::child(mice).\n0.0123::sibling(mice).\n0.0123::related(mice).\n0.0123::friend(mice).\n0.0123::knows(mice).\n0.0123::has(mice).\n0.0121::animal(dogs).\n0.0121::person(dogs).\n0.0121::parent(dogs).\n0.0121::child(dogs).\n0.0121::sibling(dogs).\n0.0121::related(dogs).\n0.0121::friend(dogs).\n0.0121::knows(dogs).\n0.0121::has(dogs).\n0.0123::animal(bones).\n0.0123::person(bones).\n0.0123::parent(bones).\n0.0123::child(bones).\n0.0123::sibling(bones).\n0.0123::related(bones).\n0.0123::friend(bones).\n0.0123::knows(bones).\n0.0123::has(bones).\n\nquery(related(_, _)).",
+      "execution_success": true,
+      "uncertainty": 4.0774424561889475,
+      "per_term_uncertainty": [
+        2.2143781068140043,
+        1.176678527813455,
+        2.2143781068140043,
+        1.176678527813455,
+        2.2637401751935102,
+        1.1836116381367252,
+        2.2143781068140043,
+        2.2637401751935102,
+        2.2143781068140043
+      ],
+      "answer": true,
+      "question": "Does Alice like mice?"
+    },
+    {
+      "example_id": "dummy_1",
+      "pipeline": "ot_enhanced",
+      "document": "If X is a cat then X likes mice. Alice is a cat. Bob is a dog.",
+      "problog_code": "0.0833::cat(cat).\n0.0833::likes(likes).\n0.0185::animal(mice).\n0.0185::person(mice).\n0.0185::parent(mice).\n0.0185::child(mice).\n0.0185::sibling(mice).\n0.0185::related(mice).\n0.0185::friend(mice).\n0.0185::knows(mice).\n0.0185::has(mice).\n0.0185::animal(alice).\n0.0185::person(alice).\n0.0185::parent(alice).\n0.0185::child(alice).\n0.0185::sibling(alice).\n0.0185::related(alice).\n0.0185::friend(alice).\n0.0185::knows(alice).\n0.0185::has(alice).\n0.0185::animal(bob).\n0.0185::person(bob).\n0.0185::parent(bob).\n0.0185::child(bob).\n0.0185::sibling(bob).\n0.0185::related(bob).\n0.0185::friend(bob).\n0.0185::knows(bob).\n0.0185::has(bob).\n0.0833::dog(dog).\n\nquery(related(_, _)).",
+      "execution_success": true,
+      "uncertainty": 3.7872496666479596,
+      "per_term_uncertainty": [
+        1.7925577268468587,
+        1.792557726846858,
+        2.198422684757183,
+        2.198422684757183,
+        2.198422684757183,
+        1.792557726846859
+      ],
+      "answer": true,
+      "question": "Does Alice like mice?"
+    }
+  ],
+  "summary": {
+    "baseline_success_rate": 1.0,
+    "ot_success_rate": 1.0,
+    "ot_uncertainty": {
+      "mean": 3.9323460614184533,
+      "std": 0.14509639477049396,
+      "min": 3.7872496666479596,
+      "max": 4.0774424561889475,
+      "num_valid": 2
+    },
+    "num_examples": 2
+  },
+  "uncertainty_calibration_spearman": NaN
+}

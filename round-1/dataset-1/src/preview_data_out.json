@@ -1,0 +1,38 @@
+{
+  "datasets": [
+    {
+      "dataset": "ruletaker",
+      "examples": [
+        {
+          "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Bob i...",
+          "output": "entailment"
+        },
+        {
+          "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Dave ...",
+          "output": "not entailment"
+        },
+        {
+          "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Bob i...",
+          "output": "entailment"
+        }
+      ]
+    },
+    {
+      "dataset": "clutrr",
+      "examples": [
+        {
+          "input": "[Ashley]'s daughter, [Lillian], asked her mom to read her a story. [Nicholas]'s sister [Lillian] asked him for some help planting her garden.",
+          "output": "15"
+        },
+        {
+          "input": "[Nancy] likes to cut the hair of her daughter [Heidi]. [Heidi]'s sister [Lorraine] went to beauty school and taught them all how to cut hair expertly.",
+          "output": "2"
+        },
+        {
+          "input": "[Dale] and his sister [Nancy] are decorating for a party. [Nancy]'s daughter [Louise] thinks the party will be fun.",
+          "output": "13"
+        }
+      ]
+    }
+  ]
+}

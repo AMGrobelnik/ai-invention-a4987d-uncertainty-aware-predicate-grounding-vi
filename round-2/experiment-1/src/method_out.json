@@ -1,0 +1,2422 @@
+{
+  "experiment_id": "ot_predicate_grounding_v1",
+  "dataset_stats": {
+    "ruletaker": 100,
+    "clutrr": 100
+  },
+  "results": {
+    "main": {
+      "n_successful": 200,
+      "n_total": 200,
+      "success_rate": 1.0
+    },
+    "ablation": {},
+    "uncertainty_calibration": {}
+  },
+  "per_example": [
+    {
+      "dataset": "ruletaker",
+      "example_id": 0,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Bob i",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.233\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.23280608847762851
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 1,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Dave ",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.287\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.28684050220448587
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 2,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Bob i",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.827\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.8269394465101569
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 3,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Bob i",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.443\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.44306580946034424
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 4,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Dave ",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.248\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.24811129314834002
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 5,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Anne ",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.799\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7988509324480858
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 6,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Fiona",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.757\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7570805788506457
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 7,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Dave ",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.283\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.28314482608928604
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 8,
+      "input": "Fiona is white. If someone is big and not rough then they are not green. If someone is white then they are not big. If someone is not big then they are not young. If someone is smart and not young the",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.425\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.4253969987114401
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 9,
+      "input": "Fiona is white. If someone is big and not rough then they are not green. If someone is white then they are not big. If someone is not big then they are not young. If someone is smart and not young the",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.577\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5767359037545037
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 10,
+      "input": "Fiona is white. If someone is big and not rough then they are not green. If someone is white then they are not big. If someone is not big then they are not young. If someone is smart and not young the",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.370\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.37027601542503885
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 11,
+      "input": "Fiona is white. If someone is big and not rough then they are not green. If someone is white then they are not big. If someone is not big then they are not young. If someone is smart and not young the",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.823\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.8226892001642055
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 12,
+      "input": "Bob is furry. Charlie is furry. Harry is not green. If someone is not kind then they are quiet. Bob is furry.",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.217\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.21748154442792986
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 13,
+      "input": "Bob is furry. Charlie is furry. Harry is not green. If someone is not kind then they are quiet. Charlie is not furry.",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.361\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.3613733079194489
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 14,
+      "input": "Bob is furry. Charlie is furry. Harry is not green. If someone is not kind then they are quiet. Charlie is quiet.",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.220\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.2198673123048015
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 15,
+      "input": "Bob is furry. Charlie is furry. Harry is not green. If someone is not kind then they are quiet. Bob is not quiet.",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.688\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6881711544421274
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 16,
+      "input": "Bob is furry. Charlie is furry. Harry is not green. If someone is not kind then they are quiet. Harry is kind.",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.315\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.3150422587738291
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 17,
+      "input": "The tiger is green. Rough things are cold. If something is round then it is rough. If something is round then it is green. If something is cold and rough then it is round. Green, kind things are rough",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.566\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5657630924221996
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 18,
+      "input": "The tiger is green. Rough things are cold. If something is round then it is rough. If something is round then it is green. If something is cold and rough then it is round. Green, kind things are rough",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.572\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5715619154077983
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 19,
+      "input": "The tiger is green. Rough things are cold. If something is round then it is rough. If something is round then it is green. If something is cold and rough then it is round. Green, kind things are rough",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.311\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.3109065174421194
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 20,
+      "input": "The tiger is green. Rough things are cold. If something is round then it is rough. If something is round then it is green. If something is cold and rough then it is round. Green, kind things are rough",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.763\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7630423104577648
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 21,
+      "input": "The tiger is green. Rough things are cold. If something is round then it is rough. If something is round then it is green. If something is cold and rough then it is round. Green, kind things are rough",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.682\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6817921627720142
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 22,
+      "input": "The tiger is green. Rough things are cold. If something is round then it is rough. If something is round then it is green. If something is cold and rough then it is round. Green, kind things are rough",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.132\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.1317520696533051
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 23,
+      "input": "The tiger is green. Rough things are cold. If something is round then it is rough. If something is round then it is green. If something is cold and rough then it is round. Green, kind things are rough",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.286\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.28566538597394653
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 24,
+      "input": "Anne is blue. Anne is furry. Anne is red. Anne is round. Gary is furry. Gary is red. Gary is white. If someone is furry and red then they are round. All furry, round people are red. If someone is furr",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.640\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6397560814824632
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 25,
+      "input": "Anne is blue. Anne is furry. Anne is red. Anne is round. Gary is furry. Gary is red. Gary is white. If someone is furry and red then they are round. All furry, round people are red. If someone is furr",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.892\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.8918135534552863
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 26,
+      "input": "Anne is blue. Anne is furry. Anne is red. Anne is round. Gary is furry. Gary is red. Gary is white. If someone is furry and red then they are round. All furry, round people are red. If someone is furr",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.777\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7768061344106328
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 27,
+      "input": "Anne is blue. Anne is furry. Anne is red. Anne is round. Gary is furry. Gary is red. Gary is white. If someone is furry and red then they are round. All furry, round people are red. If someone is furr",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.627\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6265637003835108
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 28,
+      "input": "Anne is blue. Anne is furry. Anne is red. Anne is round. Gary is furry. Gary is red. Gary is white. If someone is furry and red then they are round. All furry, round people are red. If someone is furr",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.643\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6428208466434457
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 29,
+      "input": "Anne is blue. Anne is furry. Anne is red. Anne is round. Gary is furry. Gary is red. Gary is white. If someone is furry and red then they are round. All furry, round people are red. If someone is furr",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.558\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5580287154191902
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 30,
+      "input": "Anne is blue. Anne is furry. Anne is red. Anne is round. Gary is furry. Gary is red. Gary is white. If someone is furry and red then they are round. All furry, round people are red. If someone is furr",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.504\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5039521932964298
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 31,
+      "input": "Anne is blue. Anne is furry. Anne is red. Anne is round. Gary is furry. Gary is red. Gary is white. If someone is furry and red then they are round. All furry, round people are red. If someone is furr",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.668\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6680322557671979
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 32,
+      "input": "The bear eats the mouse. The bear is blue. The bear is cold. The bear is green. The bear is not kind. The bear is rough. The bear does not need the mouse. The bear visits the mouse. The mouse eats the",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.168\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.16794600561007123
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 33,
+      "input": "The bear eats the mouse. The bear is blue. The bear is cold. The bear is green. The bear is not kind. The bear is rough. The bear does not need the mouse. The bear visits the mouse. The mouse eats the",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.704\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7036746166157766
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 34,
+      "input": "The bear eats the mouse. The bear is blue. The bear is cold. The bear is green. The bear is not kind. The bear is rough. The bear does not need the mouse. The bear visits the mouse. The mouse eats the",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.413\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.41294620046501573
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 35,
+      "input": "The bear eats the mouse. The bear is blue. The bear is cold. The bear is green. The bear is not kind. The bear is rough. The bear does not need the mouse. The bear visits the mouse. The mouse eats the",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.307\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.3069699796947596
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 36,
+      "input": "The bear eats the mouse. The bear is blue. The bear is cold. The bear is green. The bear is not kind. The bear is rough. The bear does not need the mouse. The bear visits the mouse. The mouse eats the",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.672\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6719400728468122
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 37,
+      "input": "The bear eats the mouse. The bear is blue. The bear is cold. The bear is green. The bear is not kind. The bear is rough. The bear does not need the mouse. The bear visits the mouse. The mouse eats the",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.329\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.3289893406594806
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 38,
+      "input": "The bear eats the mouse. The bear is blue. The bear is cold. The bear is green. The bear is not kind. The bear is rough. The bear does not need the mouse. The bear visits the mouse. The mouse eats the",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.727\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7271199064916964
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 39,
+      "input": "The bear eats the mouse. The bear is blue. The bear is cold. The bear is green. The bear is not kind. The bear is rough. The bear does not need the mouse. The bear visits the mouse. The mouse eats the",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.483\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.4825218395975005
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 40,
+      "input": "Anne is furry. Anne is red. Anne is round. Charlie is not red. Erin is not big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is nice. Harry is rough. Harry is round. All big things",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.679\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6787473943334018
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 41,
+      "input": "Anne is furry. Anne is red. Anne is round. Charlie is not red. Erin is not big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is nice. Harry is rough. Harry is round. All big things",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.238\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.23772460372633628
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 42,
+      "input": "Anne is furry. Anne is red. Anne is round. Charlie is not red. Erin is not big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is nice. Harry is rough. Harry is round. All big things",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.375\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.3752993301956564
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 43,
+      "input": "Anne is furry. Anne is red. Anne is round. Charlie is not red. Erin is not big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is nice. Harry is rough. Harry is round. All big things",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.597\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5974854142211941
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 44,
+      "input": "Anne is furry. Anne is red. Anne is round. Charlie is not red. Erin is not big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is nice. Harry is rough. Harry is round. All big things",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.497\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.49687944359421266
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 45,
+      "input": "Anne is furry. Anne is red. Anne is round. Charlie is not red. Erin is not big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is nice. Harry is rough. Harry is round. All big things",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.237\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.23686179227078982
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 46,
+      "input": "Anne is furry. Anne is red. Anne is round. Charlie is not red. Erin is not big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is nice. Harry is rough. Harry is round. All big things",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.156\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.15598908291155605
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 47,
+      "input": "Anne is furry. Anne is red. Anne is round. Charlie is not red. Erin is not big. Erin is furry. Erin is nice. Erin is quiet. Erin is round. Harry is nice. Harry is rough. Harry is round. All big things",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.409\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.40882709698598974
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 48,
+      "input": "The bear is red. The squirrel visits the bear. If the bear needs the squirrel then the squirrel visits the bear. If something sees the bear and the bear is not nice then it visits the squirrel. If som",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.645\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6449143680468391
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 49,
+      "input": "The bear is red. The squirrel visits the bear. If the bear needs the squirrel then the squirrel visits the bear. If something sees the bear and the bear is not nice then it visits the squirrel. If som",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.186\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.18628818165317532
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 50,
+      "input": "The bear is red. The squirrel visits the bear. If the bear needs the squirrel then the squirrel visits the bear. If something sees the bear and the bear is not nice then it visits the squirrel. If som",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.439\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.439402142898325
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 51,
+      "input": "The bear is red. The squirrel visits the bear. If the bear needs the squirrel then the squirrel visits the bear. If something sees the bear and the bear is not nice then it visits the squirrel. If som",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.340\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.3401731917243541
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 52,
+      "input": "The bear is red. The squirrel visits the bear. If the bear needs the squirrel then the squirrel visits the bear. If something sees the bear and the bear is not nice then it visits the squirrel. If som",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.757\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7571385493795844
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 53,
+      "input": "The bear is red. The squirrel visits the bear. If the bear needs the squirrel then the squirrel visits the bear. If something sees the bear and the bear is not nice then it visits the squirrel. If som",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.757\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7574969338100979
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 54,
+      "input": "The bear is red. The squirrel visits the bear. If the bear needs the squirrel then the squirrel visits the bear. If something sees the bear and the bear is not nice then it visits the squirrel. If som",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.641\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6411628055998329
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 55,
+      "input": "The bear is red. The squirrel visits the bear. If the bear needs the squirrel then the squirrel visits the bear. If something sees the bear and the bear is not nice then it visits the squirrel. If som",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.522\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5224578093801479
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 56,
+      "input": "Anne is big. Anne is red. Dave is not smart. Dave is not white. Fiona is big. Fiona is nice. Fiona is quiet. Fiona is red. Fiona is rough. Fiona is smart. Fiona is white. Harry is big. Harry is not ni",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.709\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7086511995758497
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 57,
+      "input": "Anne is big. Anne is red. Dave is not smart. Dave is not white. Fiona is big. Fiona is nice. Fiona is quiet. Fiona is red. Fiona is rough. Fiona is smart. Fiona is white. Harry is big. Harry is not ni",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.824\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.8237475449396058
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 58,
+      "input": "Anne is big. Anne is red. Dave is not smart. Dave is not white. Fiona is big. Fiona is nice. Fiona is quiet. Fiona is red. Fiona is rough. Fiona is smart. Fiona is white. Harry is big. Harry is not ni",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.725\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7254435832782866
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 59,
+      "input": "Anne is big. Anne is red. Dave is not smart. Dave is not white. Fiona is big. Fiona is nice. Fiona is quiet. Fiona is red. Fiona is rough. Fiona is smart. Fiona is white. Harry is big. Harry is not ni",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.154\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.15365425467669455
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 60,
+      "input": "Anne is furry. Anne is nice. Anne is red. Anne is round. Anne is young. Dave is not furry. Dave is nice. Dave is red. Dave is young. Harry is red. If someone is smart then they are round. If someone i",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.198\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.19769016136340245
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 61,
+      "input": "Anne is furry. Anne is nice. Anne is red. Anne is round. Anne is young. Dave is not furry. Dave is nice. Dave is red. Dave is young. Harry is red. If someone is smart then they are round. If someone i",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.747\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7471306021653104
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 62,
+      "input": "Anne is furry. Anne is nice. Anne is red. Anne is round. Anne is young. Dave is not furry. Dave is nice. Dave is red. Dave is young. Harry is red. If someone is smart then they are round. If someone i",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.443\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.44332104736689437
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 63,
+      "input": "Anne is furry. Anne is nice. Anne is red. Anne is round. Anne is young. Dave is not furry. Dave is nice. Dave is red. Dave is young. Harry is red. If someone is smart then they are round. If someone i",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.359\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.35850396994685996
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 64,
+      "input": "Anne is furry. Anne is nice. Anne is red. Anne is round. Anne is young. Dave is not furry. Dave is nice. Dave is red. Dave is young. Harry is red. If someone is smart then they are round. If someone i",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.421\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.4207302636596685
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 65,
+      "input": "Anne is furry. Anne is nice. Anne is red. Anne is round. Anne is young. Dave is not furry. Dave is nice. Dave is red. Dave is young. Harry is red. If someone is smart then they are round. If someone i",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.590\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5895744673216862
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 66,
+      "input": "Anne is furry. Anne is nice. Anne is red. Anne is round. Anne is young. Dave is not furry. Dave is nice. Dave is red. Dave is young. Harry is red. If someone is smart then they are round. If someone i",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.284\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.2840763844893581
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 67,
+      "input": "Anne is furry. Anne is nice. Anne is red. Anne is round. Anne is young. Dave is not furry. Dave is nice. Dave is red. Dave is young. Harry is red. If someone is smart then they are round. If someone i",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.832\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.8323352087411422
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 68,
+      "input": "Bob is round. Bob is smart. Erin is nice. Erin is red. Erin is smart. Fiona is round. Gary is not smart. If Fiona is red then Fiona is not green. If something is not green then it is white. If somethi",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.896\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.8956853211104118
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 69,
+      "input": "Bob is round. Bob is smart. Erin is nice. Erin is red. Erin is smart. Fiona is round. Gary is not smart. If Fiona is red then Fiona is not green. If something is not green then it is white. If somethi",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.337\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.3374080786794388
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 70,
+      "input": "Bob is round. Bob is smart. Erin is nice. Erin is red. Erin is smart. Fiona is round. Gary is not smart. If Fiona is red then Fiona is not green. If something is not green then it is white. If somethi",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.574\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5740952613494056
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 71,
+      "input": "Bob is round. Bob is smart. Erin is nice. Erin is red. Erin is smart. Fiona is round. Gary is not smart. If Fiona is red then Fiona is not green. If something is not green then it is white. If somethi",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.488\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.48754838563615743
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 72,
+      "input": "Bob is round. Bob is smart. Erin is nice. Erin is red. Erin is smart. Fiona is round. Gary is not smart. If Fiona is red then Fiona is not green. If something is not green then it is white. If somethi",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.211\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.21111703627049822
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 73,
+      "input": "Bob is round. Bob is smart. Erin is nice. Erin is red. Erin is smart. Fiona is round. Gary is not smart. If Fiona is red then Fiona is not green. If something is not green then it is white. If somethi",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.589\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5894040827982056
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 74,
+      "input": "Bob is round. Bob is smart. Erin is nice. Erin is red. Erin is smart. Fiona is round. Gary is not smart. If Fiona is red then Fiona is not green. If something is not green then it is white. If somethi",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.539\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5388585841174788
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 75,
+      "input": "Bob is round. Bob is smart. Erin is nice. Erin is red. Erin is smart. Fiona is round. Gary is not smart. If Fiona is red then Fiona is not green. If something is not green then it is white. If somethi",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.125\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.12490936691807333
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 76,
+      "input": "Bob is blue. Charlie is blue. Erin is rough. Fiona is kind. If someone is red and rough then they are blue. If Charlie is blue then Charlie is red. If Bob is quiet then Bob is cold. Erin is rough.",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.549\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5492321574002083
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 77,
+      "input": "Bob is blue. Charlie is blue. Erin is rough. Fiona is kind. If someone is red and rough then they are blue. If Charlie is blue then Charlie is red. If Bob is quiet then Bob is cold. Erin is not rough.",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.448\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.44804111285764825
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 78,
+      "input": "Bob is blue. Charlie is blue. Erin is rough. Fiona is kind. If someone is red and rough then they are blue. If Charlie is blue then Charlie is red. If Bob is quiet then Bob is cold. Charlie is red.",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.611\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6113552956521063
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 79,
+      "input": "Bob is blue. Charlie is blue. Erin is rough. Fiona is kind. If someone is red and rough then they are blue. If Charlie is blue then Charlie is red. If Bob is quiet then Bob is cold. Charlie is not red",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.635\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6351466465593638
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 80,
+      "input": "Bob is blue. Charlie is blue. Erin is rough. Fiona is kind. If someone is red and rough then they are blue. If Charlie is blue then Charlie is red. If Bob is quiet then Bob is cold. Fiona is not blue.",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.839\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.8389934239542609
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 81,
+      "input": "Bob is blue. Charlie is blue. Erin is rough. Fiona is kind. If someone is red and rough then they are blue. If Charlie is blue then Charlie is red. If Bob is quiet then Bob is cold. Erin is blue.",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.560\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5595921101930875
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 82,
+      "input": "Bob is blue. Charlie is blue. Erin is rough. Fiona is kind. If someone is red and rough then they are blue. If Charlie is blue then Charlie is red. If Bob is quiet then Bob is cold. Charlie is not col",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.300\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.2999699510578876
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 83,
+      "input": "Bob is blue. Charlie is blue. Erin is rough. Fiona is kind. If someone is red and rough then they are blue. If Charlie is blue then Charlie is red. If Bob is quiet then Bob is cold. Bob is quiet.",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.191\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.191458319094797
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 84,
+      "input": "The cow does not visit the dog. The dog sees the cow. The lion is rough. The lion needs the dog. The lion needs the mouse. The lion visits the cow. The mouse needs the cow. The mouse needs the dog. Th",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.551\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5514390137520487
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 85,
+      "input": "The cow does not visit the dog. The dog sees the cow. The lion is rough. The lion needs the dog. The lion needs the mouse. The lion visits the cow. The mouse needs the cow. The mouse needs the dog. Th",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.138\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.13772967481193696
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 86,
+      "input": "The cow does not visit the dog. The dog sees the cow. The lion is rough. The lion needs the dog. The lion needs the mouse. The lion visits the cow. The mouse needs the cow. The mouse needs the dog. Th",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.207\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.20677248058665443
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 87,
+      "input": "The cow does not visit the dog. The dog sees the cow. The lion is rough. The lion needs the dog. The lion needs the mouse. The lion visits the cow. The mouse needs the cow. The mouse needs the dog. Th",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.495\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.4953391382177669
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 88,
+      "input": "The cow does not visit the dog. The dog sees the cow. The lion is rough. The lion needs the dog. The lion needs the mouse. The lion visits the cow. The mouse needs the cow. The mouse needs the dog. Th",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.610\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6095782249649763
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 89,
+      "input": "The cow does not visit the dog. The dog sees the cow. The lion is rough. The lion needs the dog. The lion needs the mouse. The lion visits the cow. The mouse needs the cow. The mouse needs the dog. Th",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.149\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.14941890086646747
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 90,
+      "input": "The cow does not visit the dog. The dog sees the cow. The lion is rough. The lion needs the dog. The lion needs the mouse. The lion visits the cow. The mouse needs the cow. The mouse needs the dog. Th",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.144\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.14436199031637129
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 91,
+      "input": "The cow does not visit the dog. The dog sees the cow. The lion is rough. The lion needs the dog. The lion needs the mouse. The lion visits the cow. The mouse needs the cow. The mouse needs the dog. Th",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.680\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6796640660317582
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 92,
+      "input": "The bald eagle visits the cow. The bear needs the bald eagle. The cow is nice. The squirrel is green. If the cow is cold and the cow needs the squirrel then the squirrel chases the bald eagle. If some",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.759\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7592943591658475
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 93,
+      "input": "The bald eagle visits the cow. The bear needs the bald eagle. The cow is nice. The squirrel is green. If the cow is cold and the cow needs the squirrel then the squirrel chases the bald eagle. If some",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.616\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6158820419097318
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 94,
+      "input": "The bald eagle visits the cow. The bear needs the bald eagle. The cow is nice. The squirrel is green. If the cow is cold and the cow needs the squirrel then the squirrel chases the bald eagle. If some",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.713\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.7132848580594934
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 95,
+      "input": "The bald eagle visits the cow. The bear needs the bald eagle. The cow is nice. The squirrel is green. If the cow is cold and the cow needs the squirrel then the squirrel chases the bald eagle. If some",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.669\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.6685404131633981
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 96,
+      "input": "The bald eagle visits the cow. The bear needs the bald eagle. The cow is nice. The squirrel is green. If the cow is cold and the cow needs the squirrel then the squirrel chases the bald eagle. If some",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.570\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.5695212643495222
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 97,
+      "input": "The bald eagle visits the cow. The bear needs the bald eagle. The cow is nice. The squirrel is green. If the cow is cold and the cow needs the squirrel then the squirrel chases the bald eagle. If some",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.277\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.2771672923688173
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 98,
+      "input": "The bald eagle visits the cow. The bear needs the bald eagle. The cow is nice. The squirrel is green. If the cow is cold and the cow needs the squirrel then the squirrel chases the bald eagle. If some",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.848\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.8477156835234315
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 99,
+      "input": "The bald eagle visits the cow. The bear needs the bald eagle. The cow is nice. The squirrel is green. If the cow is cold and the cow needs the squirrel then the squirrel chases the bald eagle. If some",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.456\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.45553013673804077
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 0,
+      "input": "[Ashley]'s daughter, [Lillian], asked her mom to read her a story. [Nicholas]'s sister [Lillian] asked him for some help planting her garden.",
+      "ground_truth": "15",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.710\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.710399843573725
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 1,
+      "input": "[Nancy] likes to cut the hair of her daughter [Heidi]. [Heidi]'s sister [Lorraine] went to beauty school and taught them all how to cut hair expertly.",
+      "ground_truth": "2",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.757\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7573501239000698
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 2,
+      "input": "[Dale] and his sister [Nancy] are decorating for a party. [Nancy]'s daughter [Louise] thinks the party will be fun.",
+      "ground_truth": "13",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.318\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.317726996498126
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 3,
+      "input": "[Lillian] and her sister [Nancy] are the only children in their family. [Lillian]'s biggest accomplishment is raising her son [Douglas].",
+      "ground_truth": "12",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.833\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8331062408689129
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 4,
+      "input": "[Ashley] liked to go to the park with her granddaughter [Charlotte]. [Dale], [Charlotte]'s father, like to take her to the movies instead.",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.729\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7288841008605517
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 5,
+      "input": "[Theresa] wants to make a special meal for her daughter [Belva]'s birthday. [Theresa] adores her daughter [Ashley]. [Ashley] loves her very much, too.",
+      "ground_truth": "6",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.870\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8697365858739862
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 6,
+      "input": "[Heidi] and her sister [Lorraine] were playing outside. [Heidi]'s mother [Nancy] called for her to come inside.",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.405\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.40483929032736066
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 7,
+      "input": "[Jerry]'s father, [George], bought him some ice cream. [Douglas] helped his brother, [Jerry], study for the chemistry exam.",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.746\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7463753579188815
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 8,
+      "input": "[Lillian] dotes on her son [John]. Because of this, [John] is pretty spoiled. [John]'s wife, [Andrea], was excited to plan a surprise party for him.",
+      "ground_truth": "3",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.845\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8446110885033667
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 9,
+      "input": "[Charlotte] asked her father, [Dale], if he could help her fix her alternator. [Dale] told her to get her husband, [Nicolas], to do it instead.",
+      "ground_truth": "5",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.735\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7347690261969752
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 10,
+      "input": "[George] is frustrated teaching his son how to drive. His son is [Douglas]. [Douglas] loves spending time with his uncle [Wayne].",
+      "ground_truth": "1",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.803\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8034951191340666
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 11,
+      "input": "[Ashley] brought her daughter [Nancy] a cake. [Nancy]'s daughter [Lorraine] wanted to eat the cake.",
+      "ground_truth": "8",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.450\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.4502889190735504
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 12,
+      "input": "[Lorraine] and her husband [Robert] were working in the garden when [Nancy], [Lorraine]'s mother, came over and offered to help.",
+      "ground_truth": "16",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.202\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.20182538946762174
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 13,
+      "input": "[Amy] and her daughter [Jennifer] are entering the competition together. [Dale] went his brother to pick up his brother's daughter [Jennifer] from a birthday party.",
+      "ground_truth": "1",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.331\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.33143662644419214
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 14,
+      "input": "[Theresa] took her father [Clarence] and her daughter [Belva] to the park",
+      "ground_truth": "7",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.603\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6030167442934558
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 15,
+      "input": "[Ashley] took her grandson [Douglas] to daycare today. [Lillian] sat anxiously in the airport terminal, waiting to see her son [Douglas] walk through the gate.",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.273\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.27274043845426493
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 16,
+      "input": "[April]'s husband, [Douglas], went to visit his mother, [Lillian], at the hospital. As it turned out, she was making a quick recovery.",
+      "ground_truth": "11",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.531\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.5307221512791184
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 17,
+      "input": "[Dennis] and his sister [Jennifer] are going for a walk. [Jennifer] needed to ask her father [Nicholas] for a loan.",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.828\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8281287476155511
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 18,
+      "input": "[Rosetta] fixed her husband [Tony] a special dinner yesterday because it was his birthday. [Theresa] and her daughter [Rosetta] were on vaction.",
+      "ground_truth": "11",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.207\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.20703099134622072
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 19,
+      "input": "[Charlotte] ca n't wait to see her favorite aunt [Amy]. [Theresa] is married to Thomas and when she was 24, the couple welcomed [Charlotte] into the world.",
+      "ground_truth": "14",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.343\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.3428741226555112
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 20,
+      "input": "[Amy] took her younger sister [Nancy] to the carnival last weekend. [Lorraine] called her mother [Nancy] to let her know she will be back home soon.",
+      "ground_truth": "0",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.216\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.21642656239435507
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 21,
+      "input": "[Nancy] and her nephew [Douglas] played the piano together. [Lillian] loves to make cookies for her son. His name is [Douglas].",
+      "ground_truth": "14",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.133\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.1325871371468068
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 22,
+      "input": "[Douglas] and his brother [Timothy] are fighting again. [Douglas] id [Lillian]'s only child. They have a really strong bond. They spend a lot of their free time together.",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.724\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7242399136463663
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 23,
+      "input": "[Lillian]'s son, [Timothy], went with her to the store to buy candy for Halloween. [Clarence] was shopping for a new dress for his daughter [Lillian].",
+      "ground_truth": "9",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.630\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6298034278400673
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 24,
+      "input": "[Nancy] and her daughter [Lorraine] went out to dinner. [Clarence] wanted to see his granddaughter [Lorraine] one last time before she went away to college.",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.786\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7861309082154494
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 25,
+      "input": "[Douglas] gave his mother [Lillian] flowers on her birthday. [Jerry] loved his mother, [Lillian].",
+      "ground_truth": "1",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.356\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.3555285046415625
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 26,
+      "input": "[George] wanted his son, [Timothy], to go fishing with him. [Ann] and her husband [Timothy] went to catch an early movie at the theatre.",
+      "ground_truth": "5",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.734\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7343156530290116
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 27,
+      "input": "[Lillian] borrowed some money from her brother [Nicholas]. [Lillian]'s son [Timothy] missed seeing his mother on the weekends.",
+      "ground_truth": "17",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.315\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.31514662881376876
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 28,
+      "input": "[Lillian] was very proud of her son, [Douglas]. She did n't feel the same way about his brother, [John], she thought he was a disgrace.",
+      "ground_truth": "15",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.331\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.3308651093037692
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 29,
+      "input": "[Amy] has a son named [Dennis]. [Dennis] and his sister [Jennifer] went to the park.",
+      "ground_truth": "2",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.882\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.881601442540094
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 30,
+      "input": "[Nancy] learned that her daughter [Heidi] just got a new job. [Nancy]'s son [Kevin] also works for the same company.",
+      "ground_truth": "14",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.352\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.352026664461073
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 31,
+      "input": "[Douglas] received a nice gift from his grandfather [Clarence]. [Douglas] was so proud he showed it to his mother [Lillian].",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.510\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.5100475997450087
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 32,
+      "input": "[Wayne] asked his brother [George] to help him fix his car and he said he would after he got off work. [John] played catch with his dad, [George]",
+      "ground_truth": "12",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.649\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6486677409014436
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 33,
+      "input": "[Wayne] took his daughter [Heidi] out for ice cream. His other daughter, [Louise], was still in school and could not go.",
+      "ground_truth": "14",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.382\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.38192178820276657
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 34,
+      "input": "[Clarence] taught his granddaughter, [Heidi], how to fish. [Wayne] is a good character in the society, He has daughter namely called [Heidi], He does not any expect from others. Also he is sports man.",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.381\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.38058664323456737
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 35,
+      "input": "[Nicholas] took his son [Dennis] fishing. [Nicholas] and [Dennis] stopped to give [Dennis]'s sister, [Mary], some fish.",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.569\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.5694982684404624
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 36,
+      "input": "[Wayne] is supporting his daughters, [Louise] and [Heidi] while they are in school.",
+      "ground_truth": "14",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.276\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.2759414718136629
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 37,
+      "input": "[Amy] gave her brother [George] a new sweater for Christmas. [George]'s son, [Timothy], had been misbehaving, so [George] had to spank him.",
+      "ground_truth": "12",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.108\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.10844402862670162
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 38,
+      "input": "[Wayne] and his brother [Nicholas] decided to bake muffins for his daughter [Lorraine]'s first day of school.",
+      "ground_truth": "13",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.448\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.4480287291604126
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 39,
+      "input": "[Douglas]'s grandfather [Clarence] and brother [Jerry] all went to a hockey game after dinner.",
+      "ground_truth": "7",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.755\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7550400847541642
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 40,
+      "input": "[Amy] invited her son [Dennis] to dinner, but not his wife [Emily].",
+      "ground_truth": "3",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.879\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8785400151906007
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 41,
+      "input": "[Nancy] is a woman with a nephew named [Dennis]. [Nicholas] is so proud of his son. [Dennis] is the son's name.",
+      "ground_truth": "14",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.116\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.11566747003180727
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 42,
+      "input": "[Ashley] borrowed her son [Wayne]'s phone. [Wayne]'s daughter [Heidi] was not surprised about it.",
+      "ground_truth": "6",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.609\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6090399965251513
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 43,
+      "input": "[Dennis] went shopping with his wife, [Emily], for a present. His mom, [Amy], had a birthday coming up.",
+      "ground_truth": "11",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.648\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6478543428749545
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 44,
+      "input": "[Theresa] and her daughter [Belva] are entering the competition together. [Nancy] likes to make mini pies for her niece, [Belva].",
+      "ground_truth": "14",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.325\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.3249935548254933
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 45,
+      "input": "[Ashley] was cooking hamburgers with her granddaughter [Belva]. [Belva]'s father [Dale] was slicing vegetables.",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.251\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.25099337150711315
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 46,
+      "input": "[Ann] and her husband [Timothy] celebrated their anniversary last night. They went out to a nice restaurant to celebrate. [Timothy]'s mother [Lillian] was present at the thanksgiving service.",
+      "ground_truth": "11",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.406\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.4061717841324154
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 47,
+      "input": "[Dale] was busy planning a camping trip with his daughter [Charlotte]. [Dale]'s mother [Ashley] was present at the thanksgiving service.",
+      "ground_truth": "8",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.717\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7173010820586763
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 48,
+      "input": "[Ashley] is [Clarence]'s first wife [Ashley] has a son or daughter. anna daughter or son had a child. They suite a name of that child [Douglas] who is the grandson of anna.",
+      "ground_truth": "9",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.375\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.37509500884028035
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 49,
+      "input": "[George]'s son is [John]. [John] and his father always go fishing together on Sundays and have a great time together. [John]'s brother, [Douglas], brought the car over to help him.",
+      "ground_truth": "15",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.538\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.5378404536176921
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 50,
+      "input": "[Heidi] and her sister [Linda] both wanted to play with the same doll. [Heidi]'s mother, [Nancy], told them to share.",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.671\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.670994018154019
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 51,
+      "input": "[Lillian] loves playing chess her son. His name is [John]. [Jerry] needed his brother, [John], to help with a problem",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.393\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.3931722123360627
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 52,
+      "input": "[Dennis] and his father [Nicholas] went jogging by the lake. [Dennis] has a brother who is younger than him. The brother has a sister whose name is [Mary].",
+      "ground_truth": "2",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.630\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6297559961750167
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 53,
+      "input": "[Wayne] and his sister [Theresa] went to brunch today at the new diner. [Ashley]'s daughter, [Theresa], just graduated high school.",
+      "ground_truth": "15",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.414\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.4137411362021898
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 54,
+      "input": "[Timothy] loves to visit his grandfather [Clarence] on his farm in Virginia. [Clarence] and his wife [Ashley] always make his stay very special.",
+      "ground_truth": "9",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.560\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.5595351575085284
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 55,
+      "input": "Worker: [Heidi] looks just like her grandmother, [Ashley] did as a child. [Heidi] and her mother [Nancy] attended a play at the theater.",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.243\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.24313448548577243
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 56,
+      "input": "[George] decided to give his son [John], for his birthday, the latest version of Apple watch. [John] has been with his wife [Andrea] since 1989.",
+      "ground_truth": "5",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.580\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.5796976776204877
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 57,
+      "input": "[Dale] invited his daughter [Belva] to dinner. [Belva]'s husband [Travis] joined her.",
+      "ground_truth": "5",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.817\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8172655451913237
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 58,
+      "input": "[Jerry] and his uncle [Dale] went fishing yesterday. They caught many trout. [George] decided to take his son, [Jerry], on a ski vacation.",
+      "ground_truth": "1",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.689\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6890813203703517
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 59,
+      "input": "[Jennifer]'s father, [Nicholas], was so proud to see her graduate. [Nicholas]'s father, [Clarence], was glad to see him so happy.",
+      "ground_truth": "7",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.290\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.28980952336686383
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 60,
+      "input": "[Dennis] and her sister [Mary] are planning on a short vacation. They are planning on visiting their mother [Amy] in London for Spring break.",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.223\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.22329647487107218
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 61,
+      "input": "[Natalia] went to brunch with her husband [Glen] and her mother [Amy].",
+      "ground_truth": "11",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.885\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8847528402145648
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 62,
+      "input": "[Jerry] was invited to his Aunt [Theresa]'s wedding next Spring. [Lillian] takes her son [Jerry] to the park every Saturday.",
+      "ground_truth": "14",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.234\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.23416069008292767
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 63,
+      "input": "[Jerry] and his grandfather [Clarence] like to play chess together. [Douglas] went to the wedding ceremony for his brother [Jerry].",
+      "ground_truth": "7",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.794\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7943746284368214
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 64,
+      "input": "[Douglas] went to visit his grandmother [Ashley] on Sunday and his brother [John] stayed home because he had a cold.",
+      "ground_truth": "8",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.273\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.27335525828525165
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 65,
+      "input": "[Dennis] invited his sister [Natalia] out to watch the meteor shower. [Amy] gave her son, [Dennis], blankets for them to sit on and snacks to eat while they watched the meteors.",
+      "ground_truth": "2",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.835\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8349604517745501
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 66,
+      "input": "[Jennifer] us the daughter of [Nicholas] 'wife. [George] has always felt ignored in his big family. His brother [Nicholas] always got all the attention of their parents, who recounted his every accomp",
+      "ground_truth": "13",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.530\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.5301543969940491
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 67,
+      "input": "[Nicholas] took his son [Dennis] to school this morning because he missed the bus. [Clarence] is retired and likes to ride his golf cart around the beach. His grandson [Dennis] stayed with him all sum",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.321\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.32097020437790347
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 68,
+      "input": "[Nicholas] was so proud of becoming a father to his new son [Dennis]. [Nicholas] was hoping he could be as good a father as his own father [Clarence] was.",
+      "ground_truth": "9",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.234\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.23388719292720658
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 69,
+      "input": "[Lillian]'s brother [Dale] and her went to get ice cream. [June]'s father is named [Dale].",
+      "ground_truth": "0",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.444\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.4437149039599796
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 70,
+      "input": "[Clarence] is a doting husband to [Ashley]. He similarly dotes on his grandson, [Jerry].",
+      "ground_truth": "9",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.514\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.5142340971153477
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 71,
+      "input": "[George] is proud of his son. His name is [Timothy]. [George] is so proud of his son. [Jerry] is the son's name.",
+      "ground_truth": "1",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.145\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.14459742625968205
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 72,
+      "input": "[Belva] and [June] are siblings. [Belva] went to [Dale], her father.",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.841\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8411545231994105
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 73,
+      "input": "[Amy] loves cooking for her son. His name is [Dennis]. [Dale] went with his nephew [Dennis] to the gas station, they both had to use the men's restroom.",
+      "ground_truth": "1",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.102\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.10209147724407037
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 74,
+      "input": "[Douglas] is husband of [April] and son of [George].",
+      "ground_truth": "3",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.220\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.22034980941205956
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 75,
+      "input": "[Clarence] drove his granddaughter [Charlotte] to school. [Charlotte]'s sister [Belva] walked to school instead.",
+      "ground_truth": "7",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.845\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8450844168764731
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 76,
+      "input": "[Natalia] and her brother, [Dennis], were playing out in the street in front of their home. [Amy], [Dennis]'s mother, called out to them to get on the sidewalk.",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.588\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.588360083910977
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 77,
+      "input": "[Lillian] takes her son [Jerry] to the park every Saturday. [Jerry]'s grandmother, [Ashley], was sick. [Jerry] stayed by her side until she got better.",
+      "ground_truth": "10",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.685\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6851111772800982
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 78,
+      "input": "[John] asked his father [George] if he could borrow some money. [Jerry] is happy that his brother, [John], is becoming successful.",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.532\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.5319341391982613
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 79,
+      "input": "[Clarence] takes his wife [Ashley] out for their anniversary. [Ashley]'s grandson [Jerry] recently graduated college with honours.",
+      "ground_truth": "9",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.751\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.751022198689955
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 80,
+      "input": "[George], [Heidi]'s uncle, recently got into fishing. [Nancy] took her daughter, [Heidi], out to High Tea yesterday afternoon.",
+      "ground_truth": "1",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.624\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6239818429940913
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 81,
+      "input": "[Rosetta] and [Belva] got into a fight as sisters sometimes do. [Belva]'s father [Dale] yelled at them to behave.",
+      "ground_truth": "2",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.443\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.44291007359753054
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 82,
+      "input": "[Natalia] was trying to get the attention of her father [Nicholas]. [Nicholas] did n't hear her because he was so busy playing baseball with his son [Dennis].",
+      "ground_truth": "1",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.777\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7772591184768206
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 83,
+      "input": "[Clarence] was waiting patiently for his wife, [Ashley]. [June] and her granddaughter, [Ashley], enjoyed their day at the park.",
+      "ground_truth": "6",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.899\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8992339776417614
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 84,
+      "input": "[Dennis] received a nice gift from his grandfather [Clarence]. [Dennis] was so proud he showed it to his mother [Amy].",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.327\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.32722442812253005
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 85,
+      "input": ". One day [Wayne] the uncle of [Belva], decided to surprise [Belva] with a camping trip. [Belva] had been wanting to go camping for a long time. [Theresa] loved to play dress-up with her daughter [Bel",
+      "ground_truth": "1",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.154\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.15390994887579082
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 86,
+      "input": "[Ashley] was really worried about her son, [Nicholas] so she went to check up at his house. After going there, [Nicholas] told his told [Ashley] that he was just very busy with his newly born son, [De",
+      "ground_truth": "8",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.136\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.13577409718241853
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 87,
+      "input": "[Charlotte] and her sister [Belva] are excited for [Belva]'s grandfather [Clarence] to make dinner for them.",
+      "ground_truth": "7",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.482\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.48187335142981735
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 88,
+      "input": "[George] went to the wedding ceremony for his brother [Wayne]. [George] is proud of his son. His name is [Timothy].",
+      "ground_truth": "17",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.169\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.1686476300829331
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 89,
+      "input": "[Wayne] missed his daughter [Louise]. [Louise] was on a vacation with her sister, [Lorraine].",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.305\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.30450845292636586
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 90,
+      "input": "[Jerry] looked up to his older brother named [Douglas]. [Douglas] was very strong and quite brave and that's the reason [Jerry] admires him. [Ashley] is a loving grandmother and dotes on her grandchil",
+      "ground_truth": "8",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.802\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.8024131120799599
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 91,
+      "input": "[Belva] went to brunch with her husband [Travis] and her mother [Theresa].",
+      "ground_truth": "11",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.171\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.1712472957673265
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 92,
+      "input": "When [Michael] met [Amy] at the hospital, he was relieved to see her face. It could have conveyed good or bad, but what it told him was that his wife [Jennifer] had a successful surgery. When he asked",
+      "ground_truth": "16",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.470\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.4696243633535312
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 93,
+      "input": "[Dale] likes to go fishing with his sister. Her name is [Nancy]. [Dale] taught his daughter, [Rosetta], how to ride a bike.",
+      "ground_truth": "0",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.632\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6318002575663415
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 94,
+      "input": "[Nancy] called her brother, [Dale], up to see how he was doing after surgery. [Ashley] and her daughter [Nancy] are entering the competition together.",
+      "ground_truth": "15",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.760\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7604903231298425
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 95,
+      "input": "[Jerry] went to the park with his father, [George]. [Nicholas] is excited to cheer on his brother [George] in the homecoming game tonight.",
+      "ground_truth": "17",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.496\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.49649232950256483
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 96,
+      "input": "[Ashley] is n't very close to her son, [Dale]. On the other hand, she gets along great with [Dale]'s daughter, [Charlotte].",
+      "ground_truth": "6",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.444\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.44414574466760903
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 97,
+      "input": "[Heidi] offered to watch her father [Wayne]'s cats while he was on vacation with his father, [Clarence].",
+      "ground_truth": "7",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.624\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.6243295493760221
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 98,
+      "input": "[Clarence]'s granddaughter, [Belva], was away visiting her mom, [Theresa].",
+      "ground_truth": "4",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.749\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.7485053659560313
+    },
+    {
+      "dataset": "clutrr",
+      "example_id": 99,
+      "input": "[Louise] and her husband [Jacob], went over to [Wayne]'s house. [Wayne] was so happy to see his daughter.",
+      "ground_truth": "16",
+      "problog_code": "0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "refined_code": "% Uncertainty: 0.333\n0.7::relation(alice, bob, parent).\nquery(relation(alice, bob, R)).",
+      "problog_result": {
+        "relation(alice,bob,parent)": 0.7
+      },
+      "uncertainty": 0.33306971510384803
+    }
+  ],
+  "cost_summary": {
+    "total_cost_usd": 0.0,
+    "n_examples": 0
+  }
+}

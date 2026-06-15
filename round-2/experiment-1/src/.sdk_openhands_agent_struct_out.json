@@ -1,0 +1,11 @@
+{
+  "title": "Neuro-Symbolic Pipeline with Optimal Transport Predicate Grounding",
+  "layman_summary": "Implement and evaluate a neuro-symbolic text-to-logic pipeline that uses LLM-based translation with GPT-4o via OpenRouter followed by entropy-regularized optimal transport for predicate grounding refinement, integrating uncertainty estimates into ProbLog for robust probabilistic reasoning on 200 examples from RuleTaker and CLUTRR datasets.",
+  "summary": "This experiment implements a complete neuro-symbolic pipeline for text-to-logic translation with uncertainty-aware predicate grounding. The methodology consists of: (1) LLM-based translation of natural language to ProbLog code using GPT-4o via OpenRouter API, (2) Optimal Transport-based predicate grounding using sentence-transformers and POT library's Sinkhorn algorithm to compute uncertainty estimates, (3) ProbLog integration for symbolic reasoning with probability annotations, (4) Baseline comparisons against raw LLM translation and deterministic assignment, (5) Evaluation on 100 RuleTaker and 100 CLUTRR examples measuring reasoning accuracy, hallucination rate, and uncertainty calibration. The artifact includes method.py implementing the full pipeline, method_out.json with per-example results, and supporting files (pyproject.toml, data.py, logs). Key innovations include using OT entropy as an uncertainty metric for neuro-symbolic translation and integrating it into ProbLog's probabilistic reasoning framework.",
+  "out_expected_files": {
+    "script": "method.py",
+    "full_output": "full_method_out.json",
+    "mini_output": "mini_method_out.json",
+    "preview_output": "preview_method_out.json"
+  }
+}

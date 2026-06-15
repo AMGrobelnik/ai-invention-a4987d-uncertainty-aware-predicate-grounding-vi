@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "method": "neuro_symbolic_ot_predicate_grounding",
+    "dataset": "dummy",
+    "num_examples": 10,
+    "summary": {
+      "baseline_success_rate": 1.0,
+      "ot_success_rate": 1.0,
+      "ot_uncertainty": {
+        "mean": 4.0585187574225206,
+        "std": 0.17578187688327615,
+        "min": 3.7872496531803304,
+        "max": 4.390719924755946,
+        "num_valid": 10
+      },
+      "num_examples": 10
+    },
+    "uncertainty_calibration_spearman": null
+  },
+  "datasets": [
+    {
+      "dataset": "dummy",
+      "examples": [
+        {
+          "input": "Alice is a cat. Bob is a dog. Cats like mice. Dogs like bones.",
+          "output": "True",
+          "metadata_example_id": "dummy_0",
+          "metadata_question": "Does Alice like mice?",
+          "predict_baseline": "cat(cat).\ndog(dog).\ncat(cats).\nlikes(like).\ndog(dogs).\n\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0123::animal(alice).\n0.0123::person(alice).\n0.0123::parent(alice).\n0.0123::child(alice).\n0.0123::sibling(alice).\n0.0123::related(alice).\n0.0123::friend(alice).\n0.0123::knows(alice).\n0.0123::has(alice).\n0.0813::cat(cat).\n0.0123::animal(bob).\n0.0123::person(bob).\n0.0123::parent(bob).\n0.0123::child(bob).\n0.0123::sibling(bob).\n0.0123::related(bob).\n0.0123::friend(bob).\n0.0123::knows(bob).\n0.0123::has(bob).\n0.0813::dog(dog).\n0.0121::animal(cats).\n0.0121::person(cats).\n0.0121::parent(cats).\n0.0121::child(cats).\n0.0121::sibling(cats).\n0.0121::related(cats).\n0.0121::friend(cats).\n0.0121::knows(cats).\n0.0121::has(cats).\n0.0809::likes(like).\n0.0123::animal(mice).\n0.0123::person(mice).\n0.0123::parent(mice).\n0.0123::child(mice).\n0.0123::sibling(mice).\n0.0123::related(mice).\n0.0123::friend(mice).\n0.0123::knows(mice).\n0.0123::has(mice).\n0.0121::animal(dogs).\n0.0121::person(dogs).\n0.0121::parent(dogs).\n0.0121::child(dogs).\n0.0121::sibling(dogs).\n0.0121::related(dogs).\n0.0121::friend(dogs).\n0.0121::knows(dogs).\n0.0121::has(dogs).\n0.0123::animal(bones).\n0.0123::person(bones).\n0.0123::parent(bones).\n0.0123::child(bones).\n0.0123::sibling(bones).\n0.0123::related(bones).\n0.0123::friend(bones).\n0.0123::knows(bones).\n0.0123::has(bones).\n\nquery(related(_, _)).",
+          "metadata_baseline_success": true,
+          "metadata_ot_success": true,
+          "metadata_ot_uncertainty": 4.077442403606558,
+          "metadata_ot_per_term_uncertainty": [
+            2.2143781146812427,
+            1.1766781518620664,
+            2.2143781146812427,
+            1.1766781518620664,
+            2.2637402013170878,
+            1.1836112713497708,
+            2.2143781146812427,
+            2.2637402013170878,
+            2.2143781146812427
+          ]
+        },
+        {
+          "input": "If X is a cat then X likes mice. Alice is a cat. Bob is a dog.",
+          "output": "True",
+          "metadata_example_id": "dummy_1",
+          "metadata_question": "Does Alice like mice?",
+          "predict_baseline": "cat(cat).\nlikes(likes).\ndog(dog).\n\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0833::cat(cat).\n0.0833::likes(likes).\n0.0185::animal(mice).\n0.0185::person(mice).\n0.0185::parent(mice).\n0.0185::child(mice).\n0.0185::sibling(mice).\n0.0185::related(mice).\n0.0185::friend(mice).\n0.0185::knows(mice).\n0.0185::has(mice).\n0.0185::animal(alice).\n0.0185::person(alice).\n0.0185::parent(alice).\n0.0185::child(alice).\n0.0185::sibling(alice).\n0.0185::related(alice).\n0.0185::friend(alice).\n0.0185::knows(alice).\n0.0185::has(alice).\n0.0185::animal(bob).\n0.0185::person(bob).\n0.0185::parent(bob).\n0.0185::child(bob).\n0.0185::sibling(bob).\n0.0185::related(bob).\n0.0185::friend(bob).\n0.0185::knows(bob).\n0.0185::has(bob).\n0.0833::dog(dog).\n\nquery(related(_, _)).",
+          "metadata_baseline_success": true,
+          "metadata_ot_success": true,
+          "metadata_ot_uncertainty": 3.7872496531803312,
+          "metadata_ot_per_term_uncertainty": [
+            1.7925576830626704,
+            1.7925576830626704,
+            2.1984226848418813,
+            2.1984226848418813,
+            2.1984226848418813,
+            1.7925576830626704
+          ]
+        },
+        {
+          "input": "Every cat is an animal. Every dog is an animal. Alice is a cat. Bob is a dog.",
+          "output": "True",
+          "metadata_example_id": "dummy_2",
+          "metadata_question": "Is Alice an animal?",
+          "predict_baseline": "cat(cat).\nanimal(animal).\ndog(dog).\n\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0185::person(every).\n0.0185::parent(every).\n0.0185::child(every).\n0.0185::sibling(every).\n0.0185::related(every).\n0.0185::likes(every).\n0.0185::friend(every).\n0.0185::knows(every).\n0.0185::has(every).\n0.0833::cat(cat).\n0.0833::animal(animal).\n0.0833::dog(dog).\n0.0185::person(alice).\n0.0185::parent(alice).\n0.0185::child(alice).\n0.0185::sibling(alice).\n0.0185::related(alice).\n0.0185::likes(alice).\n0.0185::friend(alice).\n0.0185::knows(alice).\n0.0185::has(alice).\n0.0185::person(bob).\n0.0185::parent(bob).\n0.0185::child(bob).\n0.0185::sibling(bob).\n0.0185::related(bob).\n0.0185::likes(bob).\n0.0185::friend(bob).\n0.0185::knows(bob).\n0.0185::has(bob).\n\nquery(related(_, _)).",
+          "metadata_baseline_success": true,
+          "metadata_ot_success": true,
+          "metadata_ot_uncertainty": 3.7872496531803304,
+          "metadata_ot_per_term_uncertainty": [
+            2.1984226848418813,
+            1.7925576830626704,
+            1.7925576830626704,
+            1.7925576830626704,
+            2.1984226848418813,
+            2.1984226848418813
+          ]
+        },
+        {
+          "input": "Parents are older than their children. Alice is a parent of Bob. Bob is a parent of Charlie.",
+          "output": "True",
+          "metadata_example_id": "dummy_3",
+          "metadata_question": "Is Alice older than Charlie?",
+          "predict_baseline": "parent(parents).\nchild(children).\nparent(parent).\n\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0126::cat(parents).\n0.0126::dog(parents).\n0.0126::animal(parents).\n0.0126::person(parents).\n0.0155::parent(parents).\n0.0126::sibling(parents).\n0.0126::related(parents).\n0.0126::likes(parents).\n0.0126::friend(parents).\n0.0126::knows(parents).\n0.0126::has(parents).\n0.0142::cat(older).\n0.0142::dog(older).\n0.0142::animal(older).\n0.0142::person(older).\n0.0142::sibling(older).\n0.0142::related(older).\n0.0142::likes(older).\n0.0142::friend(older).\n0.0142::knows(older).\n0.0142::has(older).\n0.0772::child(children).\n0.0142::cat(alice).\n0.0142::dog(alice).\n0.0142::animal(alice).\n0.0142::person(alice).\n0.0142::sibling(alice).\n0.0142::related(alice).\n0.0142::likes(alice).\n0.0142::friend(alice).\n0.0142::knows(alice).\n0.0142::has(alice).\n0.0678::parent(parent).\n0.0142::cat(bob).\n0.0142::dog(bob).\n0.0142::animal(bob).\n0.0142::person(bob).\n0.0142::sibling(bob).\n0.0142::related(bob).\n0.0142::likes(bob).\n0.0142::friend(bob).\n0.0142::knows(bob).\n0.0142::has(bob).\n0.0142::cat(charlie).\n0.0142::dog(charlie).\n0.0142::animal(charlie).\n0.0142::person(charlie).\n0.0142::sibling(charlie).\n0.0142::related(charlie).\n0.0142::likes(charlie).\n0.0142::friend(charlie).\n0.0142::knows(charlie).\n0.0142::has(charlie).\n\nquery(related(_, _)).",
+          "metadata_baseline_success": true,
+          "metadata_ot_success": true,
+          "metadata_ot_uncertainty": 4.1471719920421615,
+          "metadata_ot_per_term_uncertainty": [
+            2.4208767609702044,
+            2.330791423744579,
+            1.747849804718308,
+            2.330791423744579,
+            1.9169406402411115,
+            2.330791423744579,
+            2.330791423744579
+          ]
+        },
+        {
+          "input": "Friends like each other. Alice is a friend of Bob. Bob is a friend of Charlie.",
+          "output": "False",
+          "metadata_example_id": "dummy_4",
+          "metadata_question": "Does Alice like Charlie?",
+          "predict_baseline": "friend(friends).\nlikes(like).\nfriend(friend).\n\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0108::cat(friends).\n0.0108::dog(friends).\n0.0108::animal(friends).\n0.0108::person(friends).\n0.0108::parent(friends).\n0.0108::child(friends).\n0.0108::sibling(friends).\n0.0108::related(friends).\n0.0167::friend(friends).\n0.0108::knows(friends).\n0.0108::has(friends).\n0.0815::likes(like).\n0.0125::cat(each).\n0.0125::dog(each).\n0.0125::animal(each).\n0.0125::person(each).\n0.0125::parent(each).\n0.0125::child(each).\n0.0125::sibling(each).\n0.0125::related(each).\n0.0125::knows(each).\n0.0125::has(each).\n0.0125::cat(other).\n0.0125::dog(other).\n0.0125::animal(other).\n0.0125::person(other).\n0.0125::parent(other).\n0.0125::child(other).\n0.0125::sibling(other).\n0.0125::related(other).\n0.0125::knows(other).\n0.0125::has(other).\n0.0125::cat(alice).\n0.0125::dog(alice).\n0.0125::animal(alice).\n0.0125::person(alice).\n0.0125::parent(alice).\n0.0125::child(alice).\n0.0125::sibling(alice).\n0.0125::related(alice).\n0.0125::knows(alice).\n0.0125::has(alice).\n0.0666::friend(friend).\n0.0125::cat(bob).\n0.0125::dog(bob).\n0.0125::animal(bob).\n0.0125::person(bob).\n0.0125::parent(bob).\n0.0125::child(bob).\n0.0125::sibling(bob).\n0.0125::related(bob).\n0.0125::knows(bob).\n0.0125::has(bob).\n0.0125::cat(charlie).\n0.0125::dog(charlie).\n0.0125::animal(charlie).\n0.0125::person(charlie).\n0.0125::parent(charlie).\n0.0125::child(charlie).\n0.0125::sibling(charlie).\n0.0125::related(charlie).\n0.0125::knows(charlie).\n0.0125::has(charlie).\n\nquery(related(_, _)).",
+          "metadata_baseline_success": true,
+          "metadata_ot_success": true,
+          "metadata_ot_uncertainty": 4.22821983078969,
+          "metadata_ot_per_term_uncertainty": [
+            2.3978544524869942,
+            1.4487510174451388,
+            2.3142825825160864,
+            2.3142825825160864,
+            2.3142825825160864,
+            1.7722079303662603,
+            2.3142825825160864,
+            2.3142825825160864
+          ]
+        },
+        {
+          "input": "All birds can fly. Penguins are birds. Penguins cannot fly.",
+          "output": "False",
+          "metadata_example_id": "dummy_5",
+          "metadata_question": "Can penguins fly?",
+          "predict_baseline": "\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0167::cat(all).\n0.0167::dog(all).\n0.0167::animal(all).\n0.0167::person(all).\n0.0167::parent(all).\n0.0167::child(all).\n0.0167::sibling(all).\n0.0167::related(all).\n0.0167::likes(all).\n0.0167::friend(all).\n0.0167::knows(all).\n0.0167::has(all).\n0.0167::cat(birds).\n0.0167::dog(birds).\n0.0167::animal(birds).\n0.0167::person(birds).\n0.0167::parent(birds).\n0.0167::child(birds).\n0.0167::sibling(birds).\n0.0167::related(birds).\n0.0167::likes(birds).\n0.0167::friend(birds).\n0.0167::knows(birds).\n0.0167::has(birds).\n0.0167::cat(fly).\n0.0167::dog(fly).\n0.0167::animal(fly).\n0.0167::person(fly).\n0.0167::parent(fly).\n0.0167::child(fly).\n0.0167::sibling(fly).\n0.0167::related(fly).\n0.0167::likes(fly).\n0.0167::friend(fly).\n0.0167::knows(fly).\n0.0167::has(fly).\n0.0167::cat(penguins).\n0.0167::dog(penguins).\n0.0167::animal(penguins).\n0.0167::person(penguins).\n0.0167::parent(penguins).\n0.0167::child(penguins).\n0.0167::sibling(penguins).\n0.0167::related(penguins).\n0.0167::likes(penguins).\n0.0167::friend(penguins).\n0.0167::knows(penguins).\n0.0167::has(penguins).\n0.0167::cat(cannot).\n0.0167::dog(cannot).\n0.0167::animal(cannot).\n0.0167::person(cannot).\n0.0167::parent(cannot).\n0.0167::child(cannot).\n0.0167::sibling(cannot).\n0.0167::related(cannot).\n0.0167::likes(cannot).\n0.0167::friend(cannot).\n0.0167::knows(cannot).\n0.0167::has(cannot).\n\nquery(related(_, _)).",
+          "metadata_baseline_success": true,
+          "metadata_ot_success": true,
+          "metadata_ot_uncertainty": 4.0943445622220995,
+          "metadata_ot_per_term_uncertainty": [
+            2.484906649788001,
+            2.484906649788001,
+            2.484906649788001,
+            2.484906649788001,
+            2.484906649788001
+          ]
+        },
+        {
+          "input": "If it rains, the ground gets wet. If the ground is wet, the grass grows. It is raining.",
+          "output": "True",
+          "metadata_example_id": "dummy_6",
+          "metadata_question": "Does the grass grow?",
+          "predict_baseline": "\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0126::cat(rains).\n0.0126::dog(rains).\n0.0126::animal(rains).\n0.0126::person(rains).\n0.0126::parent(rains).\n0.0126::child(rains).\n0.0126::related(rains).\n0.0126::likes(rains).\n0.0126::friend(rains).\n0.0126::has(rains).\n0.0126::cat(ground).\n0.0126::dog(ground).\n0.0126::animal(ground).\n0.0126::person(ground).\n0.0126::parent(ground).\n0.0126::child(ground).\n0.0126::related(ground).\n0.0126::likes(ground).\n0.0126::friend(ground).\n0.0126::has(ground).\n0.0126::cat(gets).\n0.0126::dog(gets).\n0.0126::animal(gets).\n0.0126::person(gets).\n0.0126::parent(gets).\n0.0126::child(gets).\n0.0126::related(gets).\n0.0126::likes(gets).\n0.0126::friend(gets).\n0.0126::has(gets).\n0.0126::cat(wet).\n0.0126::dog(wet).\n0.0126::animal(wet).\n0.0126::person(wet).\n0.0126::parent(wet).\n0.0126::child(wet).\n0.0126::related(wet).\n0.0126::likes(wet).\n0.0126::friend(wet).\n0.0126::has(wet).\n0.0126::cat(grass).\n0.0126::dog(grass).\n0.0126::animal(grass).\n0.0126::person(grass).\n0.0126::parent(grass).\n0.0126::child(grass).\n0.0126::related(grass).\n0.0126::likes(grass).\n0.0126::friend(grass).\n0.0126::has(grass).\n0.0406::knows(grows).\n0.0110::cat(raining).\n0.0110::dog(raining).\n0.0110::animal(raining).\n0.0110::person(raining).\n0.0110::parent(raining).\n0.0110::child(raining).\n0.0264::sibling(raining).\n0.0110::related(raining).\n0.0110::likes(raining).\n0.0110::friend(raining).\n0.0110::has(raining).\n\nquery(related(_, _)).",
+          "metadata_baseline_success": true,
+          "metadata_ot_success": true,
+          "metadata_ot_uncertainty": 4.390719924755946,
+          "metadata_ot_per_term_uncertainty": [
+            2.475065600551782,
+            2.475065600551782,
+            2.475065600551782,
+            2.475065600551782,
+            2.475065600551782,
+            2.312131137266066,
+            2.426209289879441
+          ]
+        },
+        {
+          "input": "Tom is taller than Jerry. Jerry is taller than Spike. Spike is taller than Tyke.",
+          "output": "True",
+          "metadata_example_id": "dummy_7",
+          "metadata_question": "Is Tom taller than Tyke?",
+          "predict_baseline": "\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0174::cat(tom).\n0.0174::dog(tom).\n0.0174::animal(tom).\n0.0174::person(tom).\n0.0174::parent(tom).\n0.0174::child(tom).\n0.0174::sibling(tom).\n0.0174::related(tom).\n0.0174::friend(tom).\n0.0174::knows(tom).\n0.0174::has(tom).\n0.0174::cat(taller).\n0.0174::dog(taller).\n0.0174::animal(taller).\n0.0174::person(taller).\n0.0174::parent(taller).\n0.0174::child(taller).\n0.0174::sibling(taller).\n0.0174::related(taller).\n0.0174::friend(taller).\n0.0174::knows(taller).\n0.0174::has(taller).\n0.0174::cat(jerry).\n0.0174::dog(jerry).\n0.0174::animal(jerry).\n0.0174::person(jerry).\n0.0174::parent(jerry).\n0.0174::child(jerry).\n0.0174::sibling(jerry).\n0.0174::related(jerry).\n0.0174::friend(jerry).\n0.0174::knows(jerry).\n0.0174::has(jerry).\n0.0137::cat(spike).\n0.0137::dog(spike).\n0.0137::animal(spike).\n0.0137::person(spike).\n0.0137::parent(spike).\n0.0137::child(spike).\n0.0137::sibling(spike).\n0.0137::related(spike).\n0.0494::likes(spike).\n0.0137::friend(spike).\n0.0137::knows(spike).\n0.0137::has(spike).\n0.0174::cat(tyke).\n0.0174::dog(tyke).\n0.0174::animal(tyke).\n0.0174::person(tyke).\n0.0174::parent(tyke).\n0.0174::child(tyke).\n0.0174::sibling(tyke).\n0.0174::related(tyke).\n0.0174::friend(tyke).\n0.0174::knows(tyke).\n0.0174::has(tyke).\n\nquery(related(_, _)).",
+          "metadata_baseline_success": true,
+          "metadata_ot_success": true,
+          "metadata_ot_uncertainty": 4.05982766241441,
+          "metadata_ot_per_term_uncertainty": [
+            2.4717685558549727,
+            2.4717685558549727,
+            2.4717685558549727,
+            2.3648745264816524,
+            2.4717685558549727
+          ]
+        },
+        {
+          "input": "Ada likes Ben. Ben likes Chu. Chu likes Ada. If X likes Y and Y likes X then X and Y are mutual friends.",
+          "output": "False",
+          "metadata_example_id": "dummy_8",
+          "metadata_question": "Are Ada and Ben mutual friends?",
+          "predict_baseline": "likes(likes).\nfriend(friends).\n\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0167::cat(ada).\n0.0167::dog(ada).\n0.0167::animal(ada).\n0.0167::person(ada).\n0.0167::parent(ada).\n0.0167::child(ada).\n0.0167::sibling(ada).\n0.0167::related(ada).\n0.0167::knows(ada).\n0.0167::has(ada).\n0.0833::likes(likes).\n0.0167::cat(ben).\n0.0167::dog(ben).\n0.0167::animal(ben).\n0.0167::person(ben).\n0.0167::parent(ben).\n0.0167::child(ben).\n0.0167::sibling(ben).\n0.0167::related(ben).\n0.0167::knows(ben).\n0.0167::has(ben).\n0.0167::cat(chu).\n0.0167::dog(chu).\n0.0167::animal(chu).\n0.0167::person(chu).\n0.0167::parent(chu).\n0.0167::child(chu).\n0.0167::sibling(chu).\n0.0167::related(chu).\n0.0167::knows(chu).\n0.0167::has(chu).\n0.0167::cat(mutual).\n0.0167::dog(mutual).\n0.0167::animal(mutual).\n0.0167::person(mutual).\n0.0167::parent(mutual).\n0.0167::child(mutual).\n0.0167::sibling(mutual).\n0.0167::related(mutual).\n0.0167::knows(mutual).\n0.0167::has(mutual).\n0.0831::friend(friends).\n\nquery(related(_, _)).",
+          "metadata_baseline_success": true,
+          "metadata_ot_success": true,
+          "metadata_ot_uncertainty": 3.9442547893515467,
+          "metadata_ot_per_term_uncertainty": [
+            2.3052142402499602,
+            1.8460276361541867,
+            2.3052142402499602,
+            2.3052142402499602,
+            2.3052142402499602,
+            1.8480873235869202
+          ]
+        },
+        {
+          "input": "No cat likes water. All dogs like water. Felix is a cat. Rex is a dog.",
+          "output": "False",
+          "metadata_example_id": "dummy_9",
+          "metadata_question": "Does Felix like water?",
+          "predict_baseline": "cat(cat).\nlikes(likes).\ndog(dogs).\nlikes(like).\ndog(dog).\n\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0832::cat(cat).\n0.0755::likes(likes).\n0.0101::animal(water).\n0.0101::person(water).\n0.0101::parent(water).\n0.0101::child(water).\n0.0101::sibling(water).\n0.0304::related(water).\n0.0101::friend(water).\n0.0101::knows(water).\n0.0101::has(water).\n0.0127::animal(all).\n0.0127::person(all).\n0.0127::parent(all).\n0.0127::child(all).\n0.0127::sibling(all).\n0.0127::friend(all).\n0.0127::knows(all).\n0.0127::has(all).\n0.0125::animal(dogs).\n0.0125::person(dogs).\n0.0125::parent(dogs).\n0.0125::child(dogs).\n0.0125::sibling(dogs).\n0.0125::friend(dogs).\n0.0125::knows(dogs).\n0.0125::has(dogs).\n0.0118::animal(like).\n0.0118::person(like).\n0.0118::parent(like).\n0.0118::child(like).\n0.0118::sibling(like).\n0.0118::friend(like).\n0.0118::knows(like).\n0.0118::has(like).\n0.0127::animal(felix).\n0.0127::person(felix).\n0.0127::parent(felix).\n0.0127::child(felix).\n0.0127::sibling(felix).\n0.0127::friend(felix).\n0.0127::knows(felix).\n0.0127::has(felix).\n0.0127::animal(rex).\n0.0127::person(rex).\n0.0127::parent(rex).\n0.0127::child(rex).\n0.0127::sibling(rex).\n0.0127::friend(rex).\n0.0127::knows(rex).\n0.0127::has(rex).\n0.0813::dog(dog).\n\nquery(related(_, _)).",
+          "metadata_baseline_success": true,
+          "metadata_ot_success": true,
+          "metadata_ot_uncertainty": 4.068707102682127,
+          "metadata_ot_per_term_uncertainty": [
+            1.1137856028257787,
+            1.3314270184571861,
+            2.099472594394743,
+            2.195616616453716,
+            2.2453184148016536,
+            2.2949360035357698,
+            2.195616616453716,
+            2.195616616453716,
+            1.1715532447368842
+          ]
+        }
+      ]
+    }
+  ]
+}

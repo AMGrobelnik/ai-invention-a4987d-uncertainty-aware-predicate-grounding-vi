@@ -1,0 +1,21 @@
+[project]
+name = "neuro-symbolic-ot-experiment"
+version = "0.1.0"
+description = "Neuro-symbolic text-to-logic pipeline with optimal transport predicate grounding"
+requires-python = ">=3.12"
+dependencies = [
+    "pot",
+    "problog",
+    "sentence-transformers",
+    "openai",
+    "datasets",
+    "pandas",
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "loguru",
+    "tenacity",
+    "scikit-learn",
+    "aiohttp",
+    "tqdm",
+]

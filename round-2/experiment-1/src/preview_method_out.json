@@ -1,0 +1,59 @@
+{
+  "experiment_id": "ot_predicate_grounding_v1",
+  "dataset_stats": {
+    "ruletaker": 100,
+    "clutrr": 100
+  },
+  "results": {
+    "main": {
+      "n_successful": 200,
+      "n_total": 200,
+      "success_rate": 1.0
+    },
+    "ablation": {},
+    "uncertainty_calibration": {}
+  },
+  "per_example": [
+    {
+      "dataset": "ruletaker",
+      "example_id": 0,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Bob i",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.233\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.23280608847762851
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 1,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Dave ",
+      "ground_truth": "not entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.287\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.28684050220448587
+    },
+    {
+      "dataset": "ruletaker",
+      "example_id": 2,
+      "input": "Anne is quiet. Anne is not young. Bob is kind. Bob is young. Dave is rough. Dave is round. Dave is smart. Dave is not young. Fiona is quiet. Fiona is not round. Kind, young things are not smart. Bob i",
+      "ground_truth": "entailment",
+      "problog_code": "0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "refined_code": "% Uncertainty: 0.827\n0.8::fact(alice).\n0.6::fact(bob).\nquery(fact(alice)).",
+      "problog_result": {
+        "fact(alice)": 0.8
+      },
+      "uncertainty": 0.8269394465101569
+    }
+  ],
+  "reasoning_traces": [],
+  "cost_summary": {
+    "total_cost_usd": 0.0,
+    "n_examples": 0
+  }
+}

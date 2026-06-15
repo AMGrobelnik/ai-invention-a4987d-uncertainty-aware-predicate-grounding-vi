@@ -1,0 +1,17 @@
+[project]
+name = "ruleaker-clutrr-dataset-collection"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = [
+    "loguru==0.7.2",
+    "pathlib2==0.4.1",
+    "datasets==2.20.0",
+    "huggingface-hub==0.24.0",
+    "pandas==2.2.2",
+    "pyarrow==16.1.0",
+    "jsonschema==4.22.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"

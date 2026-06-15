@@ -1,0 +1,27 @@
+{
+  "datasets": [
+    {
+      "dataset": "dummy",
+      "examples": [
+        {
+          "input": "Alice is a cat. Bob is a dog. Cats like mice. Dogs like bones.",
+          "output": "True",
+          "predict_baseline": "cat(cat).\ndog(dog).\ncat(cats).\nlikes(like).\ndog(dogs).\n\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0123::animal(alice).\n0.0123::person(alice).\n0.0123::parent(alice).\n0.0123::child(alice).\n0.0123::sibling(alice).\n0.0123::related(alice).\n0.0123::friend(alice).\n0.0123::knows(alice).\n0.0123::has(alic..."
+        },
+        {
+          "input": "If X is a cat then X likes mice. Alice is a cat. Bob is a dog.",
+          "output": "True",
+          "predict_baseline": "cat(cat).\nlikes(likes).\ndog(dog).\n\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0833::cat(cat).\n0.0833::likes(likes).\n0.0185::animal(mice).\n0.0185::person(mice).\n0.0185::parent(mice).\n0.0185::child(mice).\n0.0185::sibling(mice).\n0.0185::related(mice).\n0.0185::friend(mice).\n0.018..."
+        },
+        {
+          "input": "Every cat is an animal. Every dog is an animal. Alice is a cat. Bob is a dog.",
+          "output": "True",
+          "predict_baseline": "cat(cat).\nanimal(animal).\ndog(dog).\n\nquery(related(_, _)).",
+          "predict_ot_enhanced": "0.0185::person(every).\n0.0185::parent(every).\n0.0185::child(every).\n0.0185::sibling(every).\n0.0185::related(every).\n0.0185::likes(every).\n0.0185::friend(every).\n0.0185::knows(every).\n0.0185::has(every..."
+        }
+      ]
+    }
+  ]
+}

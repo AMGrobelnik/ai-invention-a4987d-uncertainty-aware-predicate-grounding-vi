@@ -1,0 +1,6 @@
+{"ts": 1781497633.7031345, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "RuleTaker dataset AllenAI logical reasoning", "count": 5}
+{"ts": 1781497635.3588746, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "CLUTRR dataset relational reasoning Sinha 2019", "count": 5}
+{"ts": 1781497684.8351533, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "proofwriter dataset Tafjord 2021", "count": 5}
+{"ts": 1781498033.132789, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "tasksource ruletaker dataset HuggingFace", "count": 3}
+{"ts": 1781498041.1353357, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "flaitenberger LogicalReasoning hard dataset", "count": 3}
+{"ts": 1781498056.0985534, "tool": "aii_web_tools__search", "cost_usd": 0.001, "query": "CLUTRR dataset Sinha 2019 EMNLP", "count": 3}
