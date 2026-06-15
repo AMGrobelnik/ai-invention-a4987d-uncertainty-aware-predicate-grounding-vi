@@ -1,0 +1,119 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Chen et~al.(2023)Chen, Shu, Xu, and Feng]{Chen2023}
+Yanran Chen, Dandan Shu, Mengwei Xu, and Yansong Feng.
+\newblock Optimal transport for text generation.
+\newblock In \emph{Annual Meeting of the Association for Computational
+  Linguistics}, 2023.
+\newblock ACL 2023.
+
+\bibitem[Clark et~al.(2020)Clark, Tafjord, and Richardson]{Clark2020}
+Peter Clark, Oyvind Tafjord, and Kyle Richardson.
+\newblock Transformers as soft reasoners over language.
+\newblock In \emph{International Joint Conference on Artificial Intelligence},
+  pages 3882--3890, 2020.
+\newblock \doi{10.24963/ijcai.2020/537}.
+
+\bibitem[Cuturi(2013)]{Cuturi2013}
+Marco Cuturi.
+\newblock Sinkhorn distances: Lightspeed computation of optimal transport.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2013.
+\newblock NeurIPS 2013.
+
+\bibitem[Flamary et~al.(2022)Flamary, Courty, Gramfort, Alaya, Boisbunon,
+  Chambon, Chapel, Corenflos, Fatras, Fournier, Gautheron, Gayraud, Janati,
+  Rakotomamonjy, Redko, Rolet, Schutz, Seguy, Sutherland, Tavenard, Tong, and
+  Vayer]{Flamary2022}
+R{\'e}mi Flamary, Nicolas Courty, Alexandre Gramfort, Mokhtar~Z. Alaya,
+  Aur{\'e}lie Boisbunon, Stanislas Chambon, Laetitia Chapel, Adrien Corenflos,
+  Kilian Fatras, Nemo Fournier, L{\'e}o Gautheron, Nathalie T.~H. Gayraud,
+  Hicham Janati, Alain Rakotomamonjy, Ievgen Redko, Antoine Rolet, Antony
+  Schutz, Vivien Seguy, Danica~J. Sutherland, Romain Tavenard, Alexander Tong,
+  and Titouan Vayer.
+\newblock Pot: Python optimal transport.
+\newblock \emph{Journal of Machine Learning Research}, 22:\penalty0 1--8, 2022.
+\newblock JMLR 22(1):1-8.
+
+\bibitem[Kotelevskii et~al.(2025)Kotelevskii, Goloburda, Kondratyev, Fishkov,
+  Guizani, Moulines, and Panov]{Kotelevskii2025}
+N.~Kotelevskii, Maiya Goloburda, Vladimir Kondratyev, Alexander Fishkov, Mohsen
+  Guizani, {\'E}ric Moulines, and Maxim Panov.
+\newblock Multidimensional uncertainty quantification via optimal transport.
+\newblock \emph{ArXiv}, abs/2509.22380, 2025.
+\newblock \doi{10.48550/arXiv.2509.22380}.
+
+\bibitem[Olausson et~al.(2023)Olausson, Gu, Lipkin, Zhang, Solar-Lezama,
+  Tenenbaum, and Levy]{Olausson2023}
+Theo~X. Olausson, Alex Gu, Benjamin Lipkin, Cedegao~E. Zhang, Armando
+  Solar-Lezama, Josh Tenenbaum, and Roger Levy.
+\newblock Linc: A neurosymbolic approach for logical reasoning by combining
+  language models with first-order logic provers.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 5153--5176, 2023.
+\newblock \doi{10.18653/v1/2023.emnlp-main.313}.
+
+\bibitem[Peyr{\'e} and Cuturi(2019)]{Peyre2019}
+Gabriel Peyr{\'e} and Marco Cuturi.
+\newblock Computational optimal transport.
+\newblock \emph{Foundations and Trends in Machine Learning}, 11\penalty0
+  (5-6):\penalty0 355--607, 2019.
+\newblock \doi{10.1561/2200000073}.
+
+\bibitem[Raedt et~al.(2007)Raedt, Kimmig, and Toivonen]{Raedt2007}
+L.~D. Raedt, A.~Kimmig, and Hannu~(TT) Toivonen.
+\newblock Problog: A probabilistic prolog and its application in link
+  discovery.
+\newblock In \emph{International Joint Conference on Artificial Intelligence},
+  pages 2468--2473, 2007.
+
+\bibitem[Reimers and Gurevych(2019)]{Reimers2019}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-bert: Sentence embeddings using siamese bert-networks.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, volume abs/1908.10084, 2019.
+\newblock \doi{10.18653/v1/D19-1410}.
+
+\bibitem[Ryu et~al.(2024)Ryu, Kim, Lee, and Yang]{Ryu2024}
+Hyun Ryu, Gyeongman Kim, Hyemin~S. Lee, and Eunho Yang.
+\newblock Divide and translate: Compositional first-order logic translation and
+  verification for complex logical reasoning.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2410.08047, 2024.
+\newblock \doi{10.48550/arXiv.2410.08047}.
+
+\bibitem[Sha et~al.(2024)Sha, Ma, Chen, Hong, Zhu, and Liang]{Sha2024}
+Fubi Sha, Haoyu Ma, Zhenfang Chen, Yining Hong, Song-Chun Zhu, and Yitao Liang.
+\newblock Neuro-symbolic predicate invention for visual scenes.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2024.
+\newblock NeurIPS 2024.
+
+\bibitem[Sherborne and Lapata(2023)]{Sherborne2023}
+Tom Sherborne and Mirella Lapata.
+\newblock Optimal transport for cross-lingual semantic parsing.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, 2023.
+\newblock \doi{10.48550/arXiv.2311.08245}.
+\newblock arXiv:2311.08245.
+
+\bibitem[Sinha et~al.(2019)Sinha, Sodhani, Dong, Pineau, and
+  Hamilton]{Sinha2019}
+Koustuv Sinha, Shagun Sodhani, Jin Dong, Joelle Pineau, and William~L.
+  Hamilton.
+\newblock Clutrr: A diagnostic benchmark for inductive reasoning from text.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, pages 4505--4514, 2019.
+\newblock \doi{10.18653/v1/D19-1458}.
+
+\bibitem[Yang et~al.(2020)Yang, Ishay, and Lee]{Yang2020}
+Zhun Yang, Adam Ishay, and Joohyung Lee.
+\newblock Neurasp: Embracing neural networks into answer set programming.
+\newblock In \emph{International Joint Conference on Artificial Intelligence},
+  pages 1755--1762, 2020.
+\newblock \doi{10.24963/ijcai.2020/243}.
+
+\end{thebibliography}
