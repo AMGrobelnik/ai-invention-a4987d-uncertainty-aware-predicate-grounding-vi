@@ -1,0 +1,33 @@
+{
+  "datasets": [
+    {
+      "dataset": "dummy",
+      "examples": [
+        {
+          "input": "Alice is a cat. Bob is a dog. Cats like mice. Dogs like bones.",
+          "output": "True",
+          "context": "Alice is a cat. Bob is a dog. Cats like mice. Dogs like bones.",
+          "question": "Does Alice like mice?",
+          "answer": true,
+          "metadata": {"source": "dummy", "type": "simple_fact"}
+        },
+        {
+          "input": "If X is a cat then X likes mice. Alice is a cat. Bob is a dog.",
+          "output": "True",
+          "context": "If X is a cat then X likes mice. Alice is a cat. Bob is a dog.",
+          "question": "Does Alice like mice?",
+          "answer": true,
+          "metadata": {"source": "dummy", "type": "rule_inference"}
+        },
+        {
+          "input": "Every cat is an animal. Every dog is an animal. Alice is a cat. Bob is a dog.",
+          "output": "True",
+          "context": "Every cat is an animal. Every dog is an animal. Alice is a cat. Bob is a dog.",
+          "question": "Is Alice an animal?",
+          "answer": true,
+          "metadata": {"source": "dummy", "type": "inheritance"}
+        }
+      ]
+    }
+  ]
+}
